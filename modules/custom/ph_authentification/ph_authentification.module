@@ -1,0 +1,17 @@
+<?php
+
+function ph_authentification_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form_id == "user_register_form") {
+    $form["contact"]["#access"] = false;
+    $current_path = \Drupal::service("path.current")->getPath();
+    $role = explode("/", $current_path)[2];
+    if ($role == "pharmacie") {
+      $form["grossiste_profiles"]["#access"] = false;
+    } elseif ($role == "grossiste") {
+      $form["pharmacie_profiles"]["#access"] = false;
+    }
+  }
+}
+
+?>

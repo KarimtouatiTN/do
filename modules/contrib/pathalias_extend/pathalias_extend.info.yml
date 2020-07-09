@@ -1,0 +1,18 @@
+name: 'Pathalias Extend'
+type: module
+description: 'Allow extra arguments on aliased url paths.'
+package: werk21
+# core: 8.x
+php: 7.0
+
+configure: entity.pathalias_extend_suffix.collection
+
+dependencies:
+  - drupal:system (>=8.5)
+  - drupal:path
+
+# Information added by Drupal.org packaging script on 2018-11-28
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'pathalias_extend'
+datestamp: 1543378085
