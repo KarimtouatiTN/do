@@ -2,16 +2,51 @@
 
 function ph_authentification_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
 {
+  if ($form_id == "node_commande_form") {
+
+    $current_path = \Drupal::service("path.current")->getPath();
+    $uid = explode("/", $current_path)[2];
+
+  }
   if ($form_id == "user_register_form") {
     $form["contact"]["#access"] = false;
     $current_path = \Drupal::service("path.current")->getPath();
     $role = explode("/", $current_path)[2];
     if ($role == "pharmacie") {
-      $form["grossiste_profiles"]["#access"] = false;
+      $form['actions']['submit']['#submit'][]='create_pharmacie_profile';
     } elseif ($role == "grossiste") {
-      $form["pharmacie_profiles"]["#access"] = false;
+      $form['actions']['submit']['#submit'][]='create_grossiste_profile';
     }
   }
 }
 
+
+function create_pharmacie_profile(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+  $uid=$form_state->getValues()['uid'];
+  $user=\Drupal\user\Entity\User::load($uid);
+  $user->addRole('pharmacie');
+  $profile = \Drupal\profile\Entity\Profile::create([
+    'type' => 'pharmacie',
+    'uid' => $uid,
+    'field_adresse_email'=>$user->mail,
+  ]);
+  $profile->setDefault(TRUE);
+  $profile->save();
+  $user->save();
+}
+
+
+function create_grossiste_profile(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+  $uid=$form_state->getValues()['uid'];
+  $user=\Drupal\user\Entity\User::load($uid);
+  $user->addRole('grossiste');
+  $profile = \Drupal\profile\Entity\Profile::create([
+    'type' => 'grossiste',
+    'uid' => $uid,
+    'field_adresse_email'=>$user->mail,
+  ]);
+  $profile->setDefault(TRUE);
+  $profile->save();
+  $user->save();
+}
 ?>
