@@ -1,0 +1,236 @@
+.path-frontpage{
+.slider-front{
+margin-bottom: 40px;
+overflow: hidden;
+.carousel-item{
+  img{
+  width: 100%;
+  }
+  .d-md-block{
+    top: 18%;
+      h3{
+        display: none;
+        /*color: #1d71b8;
+        font-family: 'montserratbold';
+        text-transform: uppercase;
+        font-size: 41px;*/
+      }
+      .promo-pub{
+        display: flex;
+        justify-content: space-around;
+        P{
+            color: #f38b00;
+            font-size: 23px;
+            font-weight: bold;
+            border-bottom: 2px solid #1d71b8;
+            text-align: left;
+
+        }
+        h5{
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            color: #1d71b8;
+            font-weight: bold;
+          }
+        }
+        .simple-text{
+          text-align: right;
+          font-size: 26px;
+          p{
+            padding: 0;
+            margin: 0;
+          }
+        }
+        h4{
+        color: #000;
+        font-size: 28px;
+      }
+      h2{font-family: 'montserratbold';
+      
+        color: #f38b00;}
+        span{
+          color: #1d71b8;
+        }
+        .slide-imfo-{
+          padding-left: 10%;
+          text-align: left;
+          p{
+            padding: 0;
+            margin: 0;
+            
+          }
+          p:first-child{
+            padding: 0;
+            margin: 0;
+            font-size: 30px;
+            font-weight: bold;
+          }
+          .front-btn-savoir{
+            margin-right: 33%;
+          }
+        }
+      
+    }
+   }   
+ }
+ .carousel-indicators {
+   li{
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+  }
+ }
+
+
+
+ .layout{
+   h2{
+    color: #f19331;
+    text-align: center;
+    font-size: 41px;
+    font-family: 'montserratmedium';
+    padding-bottom: 36px;
+    display: none;
+  }
+ }
+
+}
+
+.titre-les-services{
+  h1{
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+      margin-top: 26px;
+      color: #f19331;
+      text-align: center;
+      font-size: 41px;
+      font-family: 'montserratmedium';
+      margin-right: 10px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px){
+.path-frontpage,.path-nos-offres{
+  .front-fiche-services-proimfo{ 
+    width: 91%;
+    margin: 0 auto;
+    .card{   
+      .card-title {
+        justify-content: center;
+        p{ 
+    font-size: 12px;
+  }
+  p:first-child{
+    padding-right: 0em;
+  }
+}
+.card-paragraphe{
+  padding: 0px;
+  p{
+  font-size: 12px;
+  }
+  h3,h4{
+    font-size: 14px;
+  }
+}
+.btn-sv-plus {    
+  left: 33%;
+  a{
+font-size: 10px;
+} 
+}
+}
+.row{
+  .col-6{padding: 5px;}    
+}
+}
+.slider-front {
+.carousel-item img{
+  width: 100%;
+  //max-width: 400px;
+  height: auto;
+}
+}
+.layout {h2 {
+font-size: 22px;
+}
+}
+.slider-front{
+  display: none;
+}
+}
+
+.block-views-blockfiche-block-3{
+  img.title{
+  display: none;
+  }
+ }
+
+ .titre-les-services{ 
+   h1 {
+     span{
+      font-size: 23px;
+
+   } 
+   img{
+    width: 26%;
+    margin-top: 11px;
+   }
+  }
+ }
+}
+.front-btn-savoir{
+  a{
+    background-color: #f38b00;
+    border-color: #f38b00;
+    &:hover,&:focus{
+      background-color: #f38b00;
+      border-color: #f38b00;
+    }
+  }
+
+}
+.txt-offres{
+  p.title{
+    color: #f38b00;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    font-size: 14px;
+    color: #1d71b8;
+    list-style-type: none;
+    background-image: url(/themes/custom/proimfo_mytheme/images/picto-ligne.png);
+    background-repeat: no-repeat;
+    background-position: 0 0.32em;
+    padding-left: 15px;
+  }
+
+}
+.block-views-blockfiche-block-3{
+ img.title{
+  margin-top: -31px;
+ }
+}
+
+
+
+@media only screen and (max-width: 1500px){
+.path-frontpage{ .slider-front{ .carousel-item {.d-md-block{ .slide-imfo-{ .front-btn-savoir {
+  margin-right: 0%;
+}
+}
+}
+}
+}
+}
+}
