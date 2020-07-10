@@ -1,0 +1,27 @@
+<?php
+
+function ph_commande_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form_id == "node_commande_form") {
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    if ($user->hasRole('pharmacie')) {
+      $current_path = \Drupal::service("path.current")->getPath();
+      $uid = explode("/", $current_path)[2];
+      $grossiste = \Drupal\user\Entity\User::load($uid);
+      if ($grossiste && $grossiste->hasRole('grossiste')) {
+        $form['actions']['submit']['#submit'][] = 'assign_commande_to_grossiste';
+      }
+    }
+  }
+}
+
+function assign_commande_to_grossiste(&$form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
+  $node = \Drupal\node\Entity\Node::load($form_state->getValue('nid'));
+  $current_path = \Drupal::service("path.current")->getPath();
+  $uid = explode("/", $current_path)[2];
+  $node->set('field_grossiste_commande',  $uid);
+  $node->save();
+}
+
+?>
