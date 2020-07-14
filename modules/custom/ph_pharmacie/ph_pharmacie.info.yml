@@ -1,0 +1,5 @@
+name: pharmacie
+description: Module that handles pharmacie profile and related stuff
+core: 8.x
+package: Custom
+type: module
