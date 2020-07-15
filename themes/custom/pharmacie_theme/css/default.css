@@ -1,0 +1,335 @@
+/*-----------------------------------------------------------------------------------*/
+/******************************* appels aux fichiers  *******************************/
+/*---------------------------------------------------------------------------------*/
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end; }
+  .navbar-expand-lg .navbar-collapse a {
+    text-transform: uppercase;
+    font-weight: 500; }
+  .navbar-expand-lg .navbar-collapse a:hover {
+    color: #4CCFE0; }
+
+#navbar-main {
+  background-color: #fff !important;
+  border: none;
+  box-shadow: none; }
+
+.region-header-form a {
+  border: 3px solid #4ccfe0;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-right: 10px; }
+
+.map-tn-pharmacie .taille-map {
+  float: left;
+  width: 54%; }
+.map-tn-pharmacie .land {
+  fill: #fff;
+  stroke: #4CCFE0;
+  stroke-width: 1px;
+  transition: fill .3s;
+  transition: all ease-in 0.5s; }
+.map-tn-pharmacie .bg-hover-map .land {
+  fill: #4CCFE0;
+  stroke: #4CCFE0; }
+
+.land:hover {
+  fill: #4CCFE0;
+  stroke: #4CCFE0; }
+
+.region-map-tun {
+  display: inherit; }
+  .region-map-tun .content {
+    background-repeat: no-repeat;
+    background-image: url(/themes/custom/pharmacie_theme/images/bg-map-tn2.png);
+    /*background: #66CBB1;
+    background: -moz-linear-gradient(top, #66CBB1 0%, #66CBB1 100%);
+    background: -webkit-linear-gradient(top, #66CBB1 0%, #66CBB1 100%);
+    background: linear-gradient(to bottom, #66CBB1 0%, #66CBB1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee25',endColorstr='#f29232',GradientType=0);
+*/ }
+
+.list-region {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 0;
+  width: 46%; }
+  .list-region .list-region-1 ul li {
+    list-style: none;
+    display: -ms-flex;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    padding: 7px 0px;
+    margin: 17px 0;
+    font-size: 19px;
+    text-align: center; }
+  .list-region .list-region-1 ul li:before {
+    content: "";
+    display: flex;
+    width: 12px;
+    height: 12px;
+    margin: 5px 10px 5px 5px;
+    background-color: #555;
+    border: 2px solid #fff;
+    color: #f38b00;
+    background-color: #ecff72;
+    -webkit-transform: rotate(47deg);
+    -moz-transform: rotate(47deg);
+    -ms-transform: rotate(47deg);
+    -o-transform: rotate(47deg);
+    transform: rotate(47deg); }
+  .list-region .list-region-1 ul a {
+    width: 100%; }
+  .list-region .list-region-1 ul a:hover {
+    text-decoration: none; }
+  .list-region li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0 0 45px;
+    color: #fff; }
+    .list-region li .hover {
+      margin: 0 auto;
+      padding: 0;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      color: #fff;
+      font-weight: bold; }
+      .list-region li .hover:before, .list-region li .hover:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        width: 0px;
+        height: 5px;
+        margin: 5px 0 0;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.75s;
+        opacity: 0;
+        background-color: #FFF; }
+      .list-region li .hover.dsg:before {
+        left: 30%; }
+      .list-region li .hover.dsg:after {
+        right: 30%; }
+    .list-region li:hover {
+      cursor: pointer; }
+      .list-region li:hover .hover:before, .list-region li:hover .hover:after {
+        width: 100%;
+        opacity: 1; }
+      .list-region li:hover .hover.hover-3:before, .list-region li:hover .hover.hover-3:after, .list-region li:hover .hover.hover-4:before, .list-region li:hover .hover.hover-4:after {
+        width: 50%; }
+
+.region-compteur {
+  background-color: #f5f5f5;
+  /* Colors */
+  /* Contents */ }
+  .region-compteur :root {
+    --color: #47469B;
+    --radius: 8px;
+    color: #445544; }
+  .region-compteur #block-compteurdigital {
+    width: 100%; }
+  .region-compteur .panel:nth-child(2) {
+    --color: #4CCFE0; }
+  .region-compteur .panel:nth-child(3) {
+    --color: #4CCFE0; }
+  .region-compteur .panel:nth-child(4) {
+    --color: #4CCFE0; }
+  .region-compteur .panels {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    transform-style: preserve-3d; }
+  .region-compteur .panel {
+    display: flex;
+    width: 200px;
+    margin: 20px 40px;
+    transition: all 1s;
+    perspective: 600px; }
+  .region-compteur .panel:hover,
+  .region-compteur .panel.open {
+    width: 400px; }
+  .region-compteur .panel:hover .page1,
+  .region-compteur .panel.open .page1 {
+    margin-left: 0;
+    transform: rotateY(0deg); }
+  .region-compteur [class^="page"] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border: 2px solid var(--color);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.12), 0 8px 16px -8px rgba(0, 0, 0, 0.15), 0 16px 24px -16px rgba(0, 0, 0, 0.17), 0 24px 48px -24px rgba(0, 0, 0, 0.25); }
+  .region-compteur .page1 {
+    position: relative;
+    margin-left: -200px;
+    transform-origin: 100% 50%;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    transform: rotateY(180deg);
+    background: var(--color); }
+  .region-compteur .front,
+  .region-compteur .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; }
+  .region-compteur .back {
+    overflow: hidden;
+    background: var(--color);
+    border-radius: var(--radius); }
+  .region-compteur .front {
+    background: #4CCFE0;
+    transform: rotateY(180deg);
+    border-radius: var(--radius); }
+  .region-compteur .front::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #4CCFE0;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%); }
+  .region-compteur h1 {
+    flex-basis: 100%;
+    margin: 0;
+    padding: 14px 16px 4px;
+    font-size: 1.2em;
+    z-index: 66;
+    font-weight: 500;
+    text-align: center;
+    background: #4CCFE0;
+    color: white; }
+  .region-compteur p {
+    padding: 16px 16px;
+    margin: 0;
+    font-size: .875em;
+    z-index: 66;
+    line-height: 1.4; }
+  .region-compteur p + p {
+    padding-top: 4px; }
+  .region-compteur .button {
+    display: flex;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: .875em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #4CCFE0;
+    text-decoration: none;
+    border-radius: 4px; }
+
+.contact-message-contact-form {
+  background-image: url(/themes/custom/pharmacie_theme/images/img-01.png);
+  background-position: right 10% bottom 45%;
+  background-repeat: no-repeat; }
+  .contact-message-contact-form fieldset label {
+    display: none; }
+  .contact-message-contact-form h2 {
+    padding-top: 60px; }
+  .contact-message-contact-form input, .contact-message-contact-form textarea {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 40%;
+    border: none;
+    border-bottom: 1px solid #757575; }
+  .contact-message-contact-form textarea {
+    width: 60%; }
+  .contact-message-contact-form input:focus {
+    outline: none;
+    box-shadow: 0 4px 2px -2px rgba(0, 123, 255, 0.25);
+    border-bottom: 1px solid rgba(0, 123, 255, 0.25); }
+  .contact-message-contact-form #edit-preview {
+    display: none; }
+
+.view-header {
+  text-align: center; }
+
+h2 {
+  padding: 35px 0;
+  text-align: center;
+  color: #4CCFE0;
+  font-size: 51px; }
+
+.view-customer-view {
+  display: inherit; }
+  .view-customer-view .row {
+    display: inherit;
+    margin: 0; }
+  .view-customer-view svg {
+    font-size: 37px;
+    color: #4CCFE0; }
+  .view-customer-view .slick-arrow::before {
+    color: #4CCFE0; }
+  .view-customer-view .content {
+    text-align: center; }
+  .view-customer-view img {
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 152px;
+    width: 152px;
+    border: 4px solid #4CCFE0; }
+  .view-customer-view .views-field-field-nom .field-content, .view-customer-view .views-field-body .field-content {
+    text-align: center; }
+  .view-customer-view .views-field-field-nom .field-content {
+    font-size: 20px;
+    padding: 13px 0;
+    font-weight: bold; }
+  .view-customer-view .slick__arrow:nth-child(2) {
+    display: none; }
+  .view-customer-view .blazy--on .slick__arrow {
+    display: block; }
+
+/* active state */
+#block-frontlanding {
+  overflow: hidden;
+  width: 100%; }
+  #block-frontlanding .content {
+    height: 100vh; }
+  #block-frontlanding .front-landing-page h1 {
+    color: #235196;
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: bold; }
+  #block-frontlanding .front-landing-page h2 {
+    text-align: left;
+    color: #4CCFE0;
+    padding: 10px 0;
+    text-transform: capitalize; }
+  #block-frontlanding .front-landing-page p {
+    line-height: 26px;
+    color: #293275;
+    font-size: 19px; }
+  #block-frontlanding .front-landing-page a {
+    background: #4CCFE0;
+    border: 1px solid #4CCFE0;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 39px 0; }
+  #block-frontlanding a:focus {
+    color: #fff;
+    border: none; }
+  #block-frontlanding .txt-info {
+    padding: 232px 0px 140px 148px;
+    background-image: url(/themes/custom/pharmacie_theme/images/bg-info-txt.png);
+    background-position: right -5% bottom 45%;
+    background-repeat: no-repeat; }
+  #block-frontlanding .img-phar {
+    border-radius: 453px 0px 0px 453px;
+    -moz-border-radius: 453px 0px 0px 453px;
+    -webkit-border-radius: 453px 0px 0px 453px;
+    border: 0px solid #000000;
+    background: #E7EDF4; }
+    #block-frontlanding .img-phar img {
+      width: 82%;
+      margin-top: 111px; }
+
+/*# sourceMappingURL=default.css.map */
