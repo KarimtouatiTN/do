@@ -5,7 +5,8 @@
   justify-content: flex-end; }
   .navbar-expand-lg .navbar-collapse a {
     text-transform: uppercase;
-    font-weight: 500; }
+    font-weight: 500;
+    color: #235196; }
   .navbar-expand-lg .navbar-collapse a:hover {
     color: #4CCFE0; }
 
@@ -15,9 +16,10 @@
   box-shadow: none; }
 
 .region-header-form a {
-  border: 3px solid #4ccfe0;
+  color: #235196;
+  border: 2px solid #4ccfe0;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 0px 22px;
   margin-right: 10px; }
 
 .map-tn-pharmacie .taille-map {
@@ -318,7 +320,7 @@ h2 {
     color: #fff;
     border: none; }
   #block-frontlanding .txt-info {
-    padding: 232px 0px 140px 148px;
+    padding: 105px 0px 123px 108px;
     background-image: url(/themes/custom/pharmacie_theme/images/bg-info-txt.png);
     background-position: right -5% bottom 45%;
     background-repeat: no-repeat; }
