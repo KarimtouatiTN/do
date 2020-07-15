@@ -10,7 +10,17 @@
  (function ($) {
 	 
 if ($('.path-frontpage').length>0){
-$('.count').each(function () {
+  let panel2 = document.querySelector('.panel:nth-child(2)');
+
+setTimeout( function() {
+  panel2.classList.add('open');
+  
+  setTimeout( function() {
+    panel2.classList.remove('open');
+  }, 1500);
+}, 500);
+
+/*$('.count').each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
@@ -21,6 +31,35 @@ $('.count').each(function () {
         }
     });
 });
+*/
+
+jQuery(".field--name-field-nom input").attr("placeholder", "Nom");
+
+jQuery(".field--name-field-email input").attr("placeholder", "E-mail");
+jQuery(".field--name-field-telephone input").attr("placeholder", "Téléphone");
+jQuery(".field--name-field-message textarea").attr("placeholder", "Message");
+
+
+$( "#id-tunis" ).hover(
+  function() {$('#Tunis').addClass('bg-hover-map');},
+  function(){ $('#Tunis').removeClass('bg-hover-map') }
+);
+
+$( "#id-ariana" ).hover(
+  function() {$('#ariana').addClass('bg-hover-map');},
+  function(){ $('#ariana').removeClass('bg-hover-map') }
+);
+
+$( "#id-manouba" ).hover(
+  function() {$('#manouba').addClass('bg-hover-map');},
+  function(){ $('#manouba').removeClass('bg-hover-map') }
+);
+
+$( "#id-bn-arous" ).hover(
+  function() {$('#ben-arous').addClass('bg-hover-map');},
+  function(){ $('#ben-arous').removeClass('bg-hover-map') }
+);
+
 }
 	 
 	 

@@ -119,14 +119,47 @@
         {% endif %}
 {% endblock %}
 
+
+
+
+
 {% block content %}
-    <div class="slider-front">
-        {% if page.slider %}
-            <div class="col-12">
-                {{ page.slider }}
+
+
+    <div class="landing-front">
+        {% if page.landing %}
+            <div class="col-12 container">
+                {{ page.landing}}
             </div>
         {% endif %}
     </div>
+
+
+    <div class="map-tun-front">
+        {% if page.map_tun %}
+            <div class="col-12 container">
+                {{ page.map_tun }}
+            </div>
+        {% endif %}
+    </div>
+
+  <div class="compteur-front">
+        {% if page.compteur %}
+            <div class="col-12 container">
+                {{ page.compteur }}
+            </div>
+        {% endif %}
+    </div>
+
+  <div class="reviews-front">
+        {% if page.reviews %}
+            <div class="col-12 container">
+                {{ page.reviews }}
+            </div>
+        {% endif %}
+    </div>
+
+
         <div id="main" class="{{ container }}">
           {{ page.breadcrumb }}
           <div class="row row-offcanvas row-offcanvas-left clearfix">

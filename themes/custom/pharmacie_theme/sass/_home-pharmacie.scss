@@ -1,236 +1,455 @@
-.path-frontpage{
-.slider-front{
-margin-bottom: 40px;
-overflow: hidden;
-.carousel-item{
-  img{
-  width: 100%;
+$animate: all 0.2s ease-in-out;
+.map-tn-pharmacie{
+  .taille-map{
+    float: left;
+    width:54%;
   }
-  .d-md-block{
-    top: 18%;
-      h3{
-        display: none;
-        /*color: #1d71b8;
-        font-family: 'montserratbold';
-        text-transform: uppercase;
-        font-size: 41px;*/
+    .land{
+        fill: #fff;
+        stroke: #4CCFE0;
+        stroke-width: 1px;
+        transition: fill .3s;
+        transition: all ease-in 0.5s;
       }
-      .promo-pub{
-        display: flex;
-        justify-content: space-around;
-        P{
-            color: #f38b00;
-            font-size: 23px;
-            font-weight: bold;
-            border-bottom: 2px solid #1d71b8;
-            text-align: left;
-
-        }
-        h5{
-            text-align: left;
-            padding: 0;
-            margin: 0;
-            color: #1d71b8;
-            font-weight: bold;
-          }
-        }
-        .simple-text{
-          text-align: right;
-          font-size: 26px;
-          p{
-            padding: 0;
-            margin: 0;
-          }
-        }
-        h4{
-        color: #000;
-        font-size: 28px;
+      .bg-hover-map{
+        .land{          
+          fill: #4CCFE0;
+          stroke: #4CCFE0;
       }
-      h2{font-family: 'montserratbold';
-      
-        color: #f38b00;}
-        span{
-          color: #1d71b8;
-        }
-        .slide-imfo-{
-          padding-left: 10%;
-          text-align: left;
-          p{
-            padding: 0;
-            margin: 0;
-            
-          }
-          p:first-child{
-            padding: 0;
-            margin: 0;
-            font-size: 30px;
-            font-weight: bold;
-          }
-          .front-btn-savoir{
-            margin-right: 33%;
-          }
-        }
-      
     }
-   }   
- }
- .carousel-indicators {
-   li{
+  }
+
+.land:hover{
+      fill: #4CCFE0;
+      stroke: #4CCFE0;
+ } 
+
+.region-map-tun{
+  display: inherit;
+  .content{
+
+    background-repeat: no-repeat;
+    background-image: url(/themes/custom/pharmacie_theme/images/bg-map-tn2.png);
+    //display: -ms-flex;
+    //justify-content: center;
+    /*background: #66CBB1;
+    background: -moz-linear-gradient(top, #66CBB1 0%, #66CBB1 100%);
+    background: -webkit-linear-gradient(top, #66CBB1 0%, #66CBB1 100%);
+    background: linear-gradient(to bottom, #66CBB1 0%, #66CBB1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee25',endColorstr='#f29232',GradientType=0);
+*/ 
+  }
+}
+
+.list-region{
+  display:-ms-flexbox;
+  display: flex;
+// justify-content: space-between;
+  padding: 30px 0;
+   width:46%;
+
+.list-region-1{
+ ul{
+  li{
+    list-style: none;
+    display: -ms-flex;
+    display: flex;
+    color:#fff;
+    align-items: center;
+    padding: 7px 0px;
+    margin: 17px 0;
+    font-size: 19px;
+    text-align: center;
+
+  }
+  li:before{
+    content: "";
+    display: flex;
     width: 12px;
     height: 12px;
-    border-radius: 100%;
-  }
- }
-
-
-
- .layout{
-   h2{
-    color: #f19331;
-    text-align: center;
-    font-size: 41px;
-    font-family: 'montserratmedium';
-    padding-bottom: 36px;
-    display: none;
-  }
- }
-
-}
-
-.titre-les-services{
-  h1{
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span{
-      margin-top: 26px;
-      color: #f19331;
-      text-align: center;
-      font-size: 41px;
-      font-family: 'montserratmedium';
-      margin-right: 10px;
-    }
-  }
-}
-
-
-@media only screen and (max-width: 600px){
-.path-frontpage,.path-nos-offres{
-  .front-fiche-services-proimfo{ 
-    width: 91%;
-    margin: 0 auto;
-    .card{   
-      .card-title {
-        justify-content: center;
-        p{ 
-    font-size: 12px;
-  }
-  p:first-child{
-    padding-right: 0em;
-  }
-}
-.card-paragraphe{
-  padding: 0px;
-  p{
-  font-size: 12px;
-  }
-  h3,h4{
-    font-size: 14px;
-  }
-}
-.btn-sv-plus {    
-  left: 33%;
-  a{
-font-size: 10px;
-} 
-}
-}
-.row{
-  .col-6{padding: 5px;}    
-}
-}
-.slider-front {
-.carousel-item img{
-  width: 100%;
-  //max-width: 400px;
-  height: auto;
-}
-}
-.layout {h2 {
-font-size: 22px;
-}
-}
-.slider-front{
-  display: none;
-}
-}
-
-.block-views-blockfiche-block-3{
-  img.title{
-  display: none;
-  }
- }
-
- .titre-les-services{ 
-   h1 {
-     span{
-      font-size: 23px;
-
-   } 
-   img{
-    width: 26%;
-    margin-top: 11px;
-   }
-  }
- }
-}
-.front-btn-savoir{
-  a{
-    background-color: #f38b00;
-    border-color: #f38b00;
-    &:hover,&:focus{
-      background-color: #f38b00;
-      border-color: #f38b00;
-    }
-  }
-
-}
-.txt-offres{
-  p.title{
+   margin: 5px 10px 5px 5px;
+  background-color: #555;
+      border: 2px solid #fff;
     color: #f38b00;
-    font-size: 17px;
+      background-color: #ecff72;
+    -webkit-transform: rotate(47deg);
+    -moz-transform: rotate(47deg);
+    -ms-transform: rotate(47deg);
+    -o-transform: rotate(47deg);
+    transform: rotate(47deg);
+
+  }
+  a{
+    width: 100%;
+  }
+  a:hover{
+   //background: #56b847;
+   text-decoration: none;
+  }
+ }
+}
+
+
+
+li{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0 0 45px;
+     color:#fff;
+    .hover {
+      margin: 0 auto;
+      padding: 0;
+      transition: $animate;
+      position: relative;
+       color:#fff;
+       font-weight: bold;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        width: 0px;
+        height: 5px;
+        margin: 5px 0 0;
+        transition: $animate;
+        transition-duration: 0.75s;
+        opacity: 0;
+        background-color: #FFF;
+      }
+    
+   
+      &.dsg {
+        &:before {
+          left: 30%;
+        }
+        &:after {
+          right: 30%;
+        }
+      }
+  
+    }
+    &:hover {
+      cursor: pointer;
+      .hover {
+        &:before,
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+        &.hover-3,
+        &.hover-4 {
+          &:before,
+          &:after {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.region-compteur{
+      background-color: #f5f5f5;
+
+      :root {
+  --color: #47469B;
+  --radius: 8px;
+  color: #445544;
+
+}
+  #block-compteurdigital{
+    width:100%;
+  }
+
+/* Colors */
+.panel:nth-child(2) {
+  --color: #4CCFE0;
+}
+.panel:nth-child(3) {
+  --color: #4CCFE0;
+}
+.panel:nth-child(4) {
+  --color: #4CCFE0;
+}
+
+.panels {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  transform-style: preserve-3d;
+}
+
+.panel {
+  display: flex;
+  width: 200px;
+  margin: 20px 40px;
+  transition: all 1s;
+  perspective: 600px;
+}
+
+.panel:hover,
+.panel.open{
+  width: 400px;
+}
+
+.panel:hover .page1,
+.panel.open .page1 {
+  margin-left: 0;
+  transform: rotateY(0deg);
+}
+
+[class^="page"] {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border: 2px solid var(--color);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .1), 0 4px 8px -4px rgba(0, 0, 0, .12), 0 8px 16px -8px rgba(0, 0, 0, .15), 0 16px 24px -16px rgba(0, 0, 0, .17), 0 24px 48px -24px rgba(0, 0, 0, .25);
+}
+
+.page1 {
+  position: relative;
+  margin-left: -200px;
+  transform-origin: 100% 50%;
+  transform-style: preserve-3d;
+  transition: all 1s;
+  transform: rotateY(180deg);
+  background: var(--color);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  overflow: hidden;
+  background: var(--color);
+  border-radius: var(--radius);
+}
+
+.front {
+  background: #4CCFE0;
+  transform: rotateY(180deg);
+  border-radius: var(--radius);
+}
+
+/* Contents */
+.front::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+  background: #4CCFE0;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
+}
+
+h1 {
+  flex-basis: 100%;
+  margin: 0;
+  padding: 14px 16px 4px;
+  font-size: 1.2em;
+
+   z-index: 66;
+  font-weight: 500;
+  text-align: center;
+  background: #4CCFE0;
+  color: white;
+}
+
+p {
+  padding: 16px 16px;
+  margin: 0;
+  font-size: .875em;
+  z-index: 66;
+  line-height: 1.4;
+}
+
+p + p {
+  padding-top: 4px;
+} 
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 12px 16px;
+  font-size: .875em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #FFF;
+  background-color: #4CCFE0;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+
+}
+
+.contact-message-contact-form{
+  //width:50%;
+    background-image: url(/themes/custom/pharmacie_theme/images/img-01.png);
+    background-position: right 10% bottom 45%;
+    background-repeat: no-repeat;
+  fieldset{
+    label{
+      display: none
+    }
+  }
+  h2{
+        padding-top: 60px;
+      
+  }
+input,textarea{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:40%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+textarea{
+  width:60%;
+}
+
+input:focus     { 
+
+  outline: none;
+    box-shadow: 0 4px 2px -2px rgba(0, 123, 255, 0.25);
+    border-bottom: 1px solid rgba(0, 123, 255, 0.25);
+}
+#edit-preview{
+  display: none;
+}
+}
+  .view-header{
+    text-align: center;
+  }
+  h2{
+     padding: 35px 0;
+     text-align: center;
+       color:#4CCFE0;
+       font-size: 51px; 
+  }
+.view-customer-view{
+  display: inherit;
+  .row{
+    display: inherit;
+    margin: 0;
+
+  }
+svg{
+  font-size: 37px;
+  color: #4CCFE0;
+}
+
+.slick-arrow::before {
+    color: #4CCFE0;
+}
+  .content{
+    text-align: center;
+  }
+  img{
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 152px;
+    width: 152px;
+    border: 4px solid #4CCFE0;
+  }
+  .views-field-field-nom,.views-field-body{
+    .field-content{
+    text-align: center;
+  }
+  }
+  .views-field-field-nom{
+  .field-content{
+    font-size: 20px;
+    padding: 13px 0;
     font-weight: bold;
   }
-  ul{
-    list-style: none;
+}
+
+.slick__arrow:nth-child(2){
+  display: none;
+}
+.blazy--on{
+  .slick__arrow{
+    display: block;
   }
-  li{
-    font-size: 14px;
-    color: #1d71b8;
-    list-style-type: none;
-    background-image: url(/themes/custom/proimfo_mytheme/images/picto-ligne.png);
+}
+}
+  
+
+/* active state */
+
+
+#block-frontlanding{
+  .content{
+        height: 100vh;
+  }
+    overflow: hidden;
+    width: 100%;
+
+  .front-landing-page{
+    h1{
+      color: #235196;
+      text-transform: uppercase;
+      font-size: 56px;
+      font-weight: bold;
+
+    }
+    h2{
+      text-align: left;
+      color: #4CCFE0;
+      padding: 10px 0 ;
+      text-transform: capitalize;
+  
+    }
+    p{
+       line-height: 26px;
+    color: #293275;
+    font-size: 19px;
+    }
+    a{
+
+      background:#4CCFE0;
+      border:1px solid #4CCFE0;
+      border-radius: 50px;
+      font-weight: bold;
+     font-size: 18px;
+        margin: 39px 0;
+    }
+    
+    }
+    a:focus{
+      color: #fff;
+      border: none
+    }
+    .txt-info{
+        padding: 232px 0px 140px 148px;
+      background-image: url(/themes/custom/pharmacie_theme/images/bg-info-txt.png);
+    background-position: right -5% bottom 45%;
     background-repeat: no-repeat;
-    background-position: 0 0.32em;
-    padding-left: 15px;
+    }
+
+    .img-phar{
+      border-radius: 453px 0px 0px 453px;
+      -moz-border-radius:453px 0px 0px 453px;
+      -webkit-border-radius:453px 0px 0px 453px;
+      border: 0px solid #000000;
+      background: #E7EDF4;
+      img{
+        width: 82%;
+        margin-top: 111px;
+      }
+    }
   }
-
-}
-.block-views-blockfiche-block-3{
- img.title{
-  margin-top: -31px;
- }
-}
-
-
-
-@media only screen and (max-width: 1500px){
-.path-frontpage{ .slider-front{ .carousel-item {.d-md-block{ .slide-imfo-{ .front-btn-savoir {
-  margin-right: 0%;
-}
-}
-}
-}
-}
-}
-}
