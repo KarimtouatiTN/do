@@ -13,6 +13,11 @@ function ph_commande_mail($key, &$message, $params) {
 
 function ph_commande_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
 {
+
+//  die(var_dump(\Drupal\node\Entity\Node::load(16)->field_chat_messages));
+  if ($form_id == "node_article_form") {
+    phpinfo();
+  }
   if ($form_id == "node_commande_form") {
     $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
     if ($user->hasRole('pharmacie')) {
