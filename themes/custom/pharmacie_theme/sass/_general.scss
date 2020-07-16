@@ -10,6 +10,11 @@
     position: relative;
     box-shadow: 0 0 10px #00000070;
     margin-bottom: 50px;
+     transition: all 0.3s;
+      transform: scale(1);
+      &:hover{ 
+      	 transform: scale(1.1);
+      }
     .fa-envelope{
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -33,11 +38,11 @@
 
       .logo-grosiste{  
       	display: -ms-flexbox;
-      	    display: flex;
-		    text-align: center;
-		    align-content: center;
-		    justify-content: center;
-		    align-items: center;
+         display: flex;
+		 text-align: center;
+		 align-content: center;
+		 justify-content: center;
+	     align-items: center;		 
 	    width: 150px;
 	    height: 150px;
 	    margin: auto;
@@ -57,7 +62,7 @@
 			    box-sizing: border-box;
 			    border-radius: 50%;
 			    animation: wave 1.5s linear;
-      }
+         }
      }
      @keyframes wave {
      to {
@@ -72,12 +77,11 @@
 }
 .hover-card:hover{
    .logo-grosiste{ 
-	&::after{
+	    &::after{
          animation: wave 1.5s infinite linear;
+	  } 
+     }
 	}
-}
-	
-    }
     .raison-sociale{
     	color: #235196;
     font-weight: bold;
@@ -85,91 +89,112 @@
     letter-spacing: 1px;
     }
     .bottom-section{
-       background: #ffffff;
+     background: #ffffff;
     position: relative;
     font-size: 16px;
     text-transform: uppercase;
-        padding: 24px 0;
-        .social-media {
-		    position: absolute;
-		    width: 100%;
-		    top: -30px;
-		    left: 0;
-		    z-index: 1;
-		    i{
-		    	width: 60px;
-    height: 60px;
-    background: #2c3e50;
+    padding: 24px 0;
+}
+    
+}
+.telephone{
+	 color: #000;
+    letter-spacing: 1px;
+
+}
+.telephone:before{
+	    content:"\f095";
+	    font-size: 25px;
+        padding: 10px;
+        color: #235196;
+       font-weight: 400;
+       font-family: FontAwesome;
+}
+
+.social-media{
+	display: -ms-flexbox;
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    left: 0;
+    z-index: 1;
+}
+
+.fa-facebook,.fa-link{
+     width: 36px;
+    height: 36px;
     border-radius: 50%;
     color: #f1f1f1;
     font-size: 20px;
-    padding: 10px;
-    line-height: 60px;
+    line-height: 36px;
     margin: 0 10px;
     position: relative;
-    font-weight: 400;
-        font-family: FontAwesome;
-        //font-family: "Font Awesome 5 Brands";
-
-		    }
-		    .fa-facebook:before {
-    content: "\f09a";
 }
- .fa-facebook::after {
+.fa-facebook:before {
+    content:"\f230";
+    font-size: 19px;
+     padding: 10px;
+     color: #235196;
+    font-weight: 400;
+    font-family: FontAwesome;
+    color:#fff;
+}
+
+.fa-facebook::after ,.fa-link::after{
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
-    background: #2c3e50;
+    background: #235196;
     left: 0;
     top: 0;
     box-sizing: border-box;
     border-radius: 50%;
     z-index: -1;
     transition: 0.4s linear;
-}
-}
- .fa-facebook:hover::after {
-  transform: scale(1.4);
-  opacity: 0;
-  
 
-}
-}
-    
-}
-.telephone{
-	    color: #000;
-    letter-spacing: 1px;
-
-}
-.telephone:before{
-	 content:"\f095";
-
-	    font-size: 25px;
-    padding: 10px;
-
-color: #235196;
+    }
+.fa-link:before{
+       font-size: 19px;
+     padding: 10px;
+     color: #235196;
     font-weight: 400;
-        font-family: FontAwesome;
-
+    font-family: FontAwesome;
+    color:#fff;
+	content:"\f0c1";
 }
+
+.social-media{
+.fa-facebook:hover::after,.fa-link:hover::after {
+  background: #4CCFE0;
+}
+}
+
 .name-grosiste{
 	margin-top: 30px;
+	  a{
+	    background: #4CCFE0;
+	    border: 1px solid #4CCFE0;
+	    //border-radius: 50px;
+	    font-weight: bold;
+	    font-size: 15px;
+	    padding: 6px 20px;
+	    color: #fff;
+	    	&:hover{
+		    background-color: #235196;
+		    text-decoration: none;
+		    transition: all ease-in 0.5s;
+	}
+	}
 
-	a{
-		    background: #4CCFE0;
-    border: 1px solid #4CCFE0;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 15px;
-    /* margin: 39px 0; */
-    padding: 6px 20px;
-    color: #fff;
-	}; 
 }
+	a:hover{
+		text-decoration: none;
+	}
 
 }
-a:hover{
-	text-decoration: none;
-}
+
+
