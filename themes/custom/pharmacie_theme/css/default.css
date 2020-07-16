@@ -334,4 +334,140 @@ h2 {
       width: 82%;
       margin-top: 111px; }
 
+.card-grossiste {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center; }
+  .card-grossiste .grosiste-card {
+    width: 328px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px #00000070;
+    margin-bottom: 50px; }
+    .card-grossiste .grosiste-card .fa-envelope {
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-weight: 900;
+      font-family: FontAwesome;
+      right: 40px;
+      position: absolute;
+      top: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #4ccfe0;
+      font-size: 25px; }
+      .card-grossiste .grosiste-card .fa-envelope:before {
+        content: "\f0e0"; }
+    .card-grossiste .grosiste-card .logo-grosiste {
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      margin-bottom: 20px;
+      border: 2px solid #4ccfe0;
+      border-radius: 50%;
+      padding: 8px;
+      position: relative; }
+      .card-grossiste .grosiste-card .logo-grosiste::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: 1px solid #4ccfe0;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        border-radius: 50%;
+        animation: wave 1.5s linear; }
+@keyframes wave {
+  to {
+    transform: scale(1.5);
+    opacity: 0; } }
+    .card-grossiste .grosiste-card .top-section {
+      padding: 60px 0px 33px 0;
+      background: #e9ecef; }
+    .card-grossiste .grosiste-card .hover-card:hover .logo-grosiste::after {
+      animation: wave 1.5s infinite linear; }
+    .card-grossiste .grosiste-card .raison-sociale {
+      color: #235196;
+      font-weight: bold;
+      text-transform: capitalize;
+      letter-spacing: 1px; }
+    .card-grossiste .grosiste-card .bottom-section {
+      background: #ffffff;
+      position: relative;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding: 24px 0; }
+      .card-grossiste .grosiste-card .bottom-section .social-media {
+        position: absolute;
+        width: 100%;
+        top: -30px;
+        left: 0;
+        z-index: 1; }
+        .card-grossiste .grosiste-card .bottom-section .social-media i {
+          width: 60px;
+          height: 60px;
+          background: #2c3e50;
+          border-radius: 50%;
+          color: #f1f1f1;
+          font-size: 20px;
+          padding: 10px;
+          line-height: 60px;
+          margin: 0 10px;
+          position: relative;
+          font-weight: 400;
+          font-family: FontAwesome; }
+        .card-grossiste .grosiste-card .bottom-section .social-media .fa-facebook:before {
+          content: "\f09a"; }
+        .card-grossiste .grosiste-card .bottom-section .social-media .fa-facebook::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background: #2c3e50;
+          left: 0;
+          top: 0;
+          box-sizing: border-box;
+          border-radius: 50%;
+          z-index: -1;
+          transition: 0.4s linear; }
+      .card-grossiste .grosiste-card .bottom-section .fa-facebook:hover::after {
+        transform: scale(1.4);
+        opacity: 0; }
+  .card-grossiste .telephone {
+    color: #000;
+    letter-spacing: 1px; }
+  .card-grossiste .telephone:before {
+    content: "\f095";
+    font-size: 25px;
+    padding: 10px;
+    color: #235196;
+    font-weight: 400;
+    font-family: FontAwesome; }
+  .card-grossiste .name-grosiste {
+    margin-top: 30px; }
+    .card-grossiste .name-grosiste a {
+      background: #4CCFE0;
+      border: 1px solid #4CCFE0;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 15px;
+      /* margin: 39px 0; */
+      padding: 6px 20px;
+      color: #fff; }
+
+a:hover {
+  text-decoration: none; }
+
 /*# sourceMappingURL=default.css.map */
