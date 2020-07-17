@@ -488,4 +488,134 @@ h2 {
   .card-grossiste a:hover {
     text-decoration: none; }
 
+.path-commander {
+  	/*input{
+  
+  
+  		&::after{
+  			    content: '';
+  			    width: 100%;
+  			    height: 100%;
+  			    position: absolute;
+  			    border: 1px solid #4ccfe0;
+  			    left: 0;
+  			    top: 0;
+  			    box-sizing: border-box;
+  			    border-radius: 50%;
+  			    animation: wave 1.5s linear;
+           }
+  
+       @keyframes wave {
+       to {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+   }
+  	
+  	}
+  	  &:hover{
+           	animation: wave 1.5s infinite linear;
+           }
+  */
+  /*------ ADDED CSS ---------*/
+  /*--------- END --------*/
+  /* Rounded sliders */ }
+  .path-commander .node-commande-form.node-form .layout-region-node-main {
+    max-width: 100%;
+    flex: 0 0 100%; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .tabledrag-toggle-weight-wrapper {
+      display: none; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main table {
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: -1px; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main table tr {
+        background: #e9ecef; }
+        .path-commander .node-commande-form.node-form .layout-region-node-main table tr:hover {
+          background: #e9ecef; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main table thead th {
+        background: #4ccfe0;
+        text-align: center; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraphs-subform {
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        padding: 22px;
+        padding: 0px 34px; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main table .field-multiple-drag {
+        display: none; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraph-type-title {
+        display: none; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-medicaments-commandes, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
+      margin-bottom: 0; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .clearfix .paragraphs-dropbutton-wrapper {
+      width: 70%;
+      margin: 0 auto;
+      background: #e9ecef; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
+      width: 70%;
+      margin: 0 auto;
+      background: #e9ecef;
+      padding: 0px 34px; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste fieldset, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence fieldset {
+        margin-bottom: 0; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste select, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence select {
+        width: 60%; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste input, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence input {
+        width: 60%; }
+  .path-commander .switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px; }
+  .path-commander .switch input {
+    display: none; }
+  .path-commander .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ca2222;
+    -webkit-transition: .4s;
+    transition: .4s; }
+  .path-commander .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s; }
+  .path-commander input:checked + .slider {
+    background-color: #2ab934; }
+  .path-commander input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3; }
+  .path-commander input:checked + .slider:before {
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px); }
+  .path-commander .on {
+    display: none; }
+  .path-commander .on, .path-commander .off {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+    padding: 17px 19px; }
+  .path-commander input:checked + .slider .on {
+    display: block; }
+  .path-commander input:checked + .slider .off {
+    display: none; }
+  .path-commander .slider.round {
+    border-radius: 34px; }
+  .path-commander .slider.round:before {
+    border-radius: 50%; }
+
 /*# sourceMappingURL=default.css.map */

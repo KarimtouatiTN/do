@@ -61,6 +61,35 @@ $( "#id-bn-arous" ).hover(
 );
 
 }
+
+
+
+
+
+
+if ($('.path-commander').length>0){
+ // alert('ookiik');
+  $('<label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"><span class="on">Urgent</span><span class="off">Normal</span><!--END--></div></label>').insertBefore('.field--name-field-urgence')
+
+
+ $(document).on('click', '.on ', function () {
+ jQuery( "select" ).val(2);
+ });
+
+  $(document).on('click', '.off', function () {
+  jQuery( "select" ).val(1);
+ });
+
+
+
+
+
+
+
+
+}
+
+
 	 
 	 
 	 })(jQuery);
