@@ -230,6 +230,13 @@
 */
 
 .node-commande-form.node-form{
+	.content.clearfix.row{
+    background: #e9ecef;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+        box-shadow: 0 0 10px #00000070;
+	}
  .layout-region-node-main{
     max-width: 100%;
     flex: 0 0 100%;
@@ -237,16 +244,47 @@
     .tabledrag-toggle-weight-wrapper{
     	display: none;
     }
+   .paragraph-type-top{
+       justify-content: flex-end !important;
+    margin-bottom: 0;
+    button{
+    	font-size: 0;
+    	background: transparent;
+    	border: transparent;
+    	    margin-top: 31px;
+    	&::after{
+        content:"\f1f8";
+      font-size: 25px;
+     padding: 10px;
+     color: #4ccfe0;
+    font-weight: 400;
+    font-family: FontAwesome;
+   
+
+    	}
+    	&::after:hover{
+       color: red;
+    	}
+    }
+   }
+    .toggle-boolean{
+      /*background: #e9ecef;
+       width: 70%;
+      margin: 0 auto;*/
+    }
     table{
-    	width: 70%;
+    	/*width: 70%;
         margin: 0 auto;
-         margin-bottom: -1px;
+         margin-bottom: -1px;*/
          tr{
          	background: #e9ecef;
          	&:hover{
          		background: #e9ecef;
          	}
 
+         }
+         td{
+         	border-top: 1px solid #e9ecef;
          }
 
         thead{
@@ -255,12 +293,33 @@
 	         text-align: center;
           }
         }
+        .form-type-number{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        }
         .paragraphs-subform {
         	display: -ms-flexbox;
            display: flex;
            align-items: center;
            padding: 22px;
            padding: 0px 34px;
+           margin-top: -46px;
+            margin-bottom: 0px;
+            .field--name-field-medicament{
+            	margin: 0;
+            	fieldset{
+
+            		margin: 0;
+            		input{
+            			
+            		}
+
+            	}
+            }
+            .field--name-field-quantite{
+               margin:0px;
+               margin-left: -37px;
+            }
         }
         .field-multiple-drag{
         	display: none;
@@ -268,9 +327,7 @@
         .paragraph-type-title {
         	display: none;
         }
-       label{
-       //display: none;
-       }
+      
     
     }
        .field--name-field-medicaments-commandes,.field--name-field-urgence{
@@ -278,16 +335,23 @@
        }
     .clearfix{
     .paragraphs-dropbutton-wrapper{
-    	width:70%;
+    	    padding: 0px 34px;
+    	/*width:70%;
     	margin:0 auto;
     	background: #e9ecef;
+    	    padding: 0px 34px;*/
+    	button{
+background: #4ccfe0;
+border: #4ccfe0;
+    	}
     }
 }
     .field--name-field-grossiste,.field--name-field-urgence{
-    	width:70%;
+    	    padding: 0px 34px;
+    	/*width:70%;
     	margin:0 auto;
     	background: #e9ecef;
-     padding: 0px 34px;
+     padding: 0px 34px;*/
     	fieldset{
     		 margin-bottom: 0;
 
@@ -296,11 +360,12 @@
     		    width: 60%;
     	}
     	input{
-    		    width: 60%;
+    		   // width: 60%;
     	}
-    	label{
-    		//display: none;
-    	}
+    	
+    }
+    .field--name-field-urgence{
+    	display: none;
     }
 
   }
@@ -312,6 +377,7 @@
   display: inline-block;
   width: 90px;
   height: 34px;
+  margin: 17px 34px;
 }
 
 .switch input {
@@ -326,7 +392,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ca2222;
+  background-color: #235196;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -344,7 +410,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2ab934;
+  background-color: #4ccfe0;
 }
 
 input:focus + .slider {
@@ -369,10 +435,18 @@ input:checked + .slider:before {
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
-  left: 50%;
   font-size: 10px;
   font-family: Verdana, sans-serif;
   padding: 17px 19px;
+  font-weight: bold;
+}
+.on{	
+    left: 39%;
+}
+.off{
+
+    left: 59%;
+
 }
 
 input:checked+ .slider .on
@@ -391,6 +465,73 @@ input:checked + .slider .off
 .slider.round:before {
   border-radius: 50%;}
 
+input{
+	background-color:#fbfbfb
+}
+.layout-region-node-secondary{
+	display: none;
+}
+.layout-region-node-footer{
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	#edit-actions{
+button{
+	 background: #4ccfe0;
+	 border:#4ccfe0;;
+	     width: 178px;
+	 &:hover{
+	 	    background-color: #235196;
+    text-decoration: none;
+    transition: all ease-in 0.5s;
+	 }
+}
+}
+}
+
+
+
+
+
+
+label{
+	display: none
+}
+
+fieldset{
+	    position: relative;
+	    width: 89%;
+
+}
+.form-text{
+	margin-top:0px;
+}
+
+
+:focus{outline: none;
+border: none;
+box-shadow: none;
+}
+input[type="text"]{
+border-radius: 0px;
+	font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+input{border: 1px solid #ccc; padding: 7px 14px 9px; transition: 0.4s;}
+
+
+
+input ~ .focus-border:before,
+input ~ .focus-border:after{content: ""; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #4ccfe0; transition: 0.2s; transition-delay: 0.2s;}
+input ~ .focus-border:after{top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.6s;}
+input ~ .focus-border i:before,
+input ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4ccfe0; transition: 0.2s;}
+input ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.4s;}
+input:focus ~ .focus-border:before,
+input:focus ~ .focus-border:after{width: 100%; transition: 0.2s; transition-delay: 0.6s;}
+input:focus ~ .focus-border:after{transition-delay: 0.2s;}
+input:focus ~ .focus-border i:before,
+input:focus ~ .focus-border i:after{height: 100%; transition: 0.2s;}
+input:focus ~ .focus-border i:after{transition-delay: 0.4s;}
 
 
 

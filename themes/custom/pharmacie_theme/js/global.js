@@ -68,8 +68,19 @@ $( "#id-bn-arous" ).hover(
 
 
 if ($('.path-commander').length>0){
+
+
+
+jQuery(".field--name-field-medicament input").attr("placeholder", "Médicament");
+jQuery(".field--name-field-quantite input").attr("placeholder", "Quantité");
+jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
+
+
+
+  $(' <span class="focus-border"><i></i></span>').insertAfter('input')
+
  // alert('ookiik');
-  $('<label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"><span class="on">Urgent</span><span class="off">Normal</span><!--END--></div></label>').insertBefore('.field--name-field-urgence')
+  $('<div class="toggle-boolean"><label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"><span class="on">Urgente</span><span class="off">Normal</span><!--END--></div></label></div>').insertBefore('.field--name-field-urgence');
 
 
  $(document).on('click', '.on ', function () {

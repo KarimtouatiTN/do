@@ -520,28 +520,69 @@ h2 {
   /*------ ADDED CSS ---------*/
   /*--------- END --------*/
   /* Rounded sliders */ }
+  .path-commander .node-commande-form.node-form .content.clearfix.row {
+    background: #e9ecef;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 0 10px #00000070; }
   .path-commander .node-commande-form.node-form .layout-region-node-main {
     max-width: 100%;
     flex: 0 0 100%; }
     .path-commander .node-commande-form.node-form .layout-region-node-main .tabledrag-toggle-weight-wrapper {
       display: none; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .paragraph-type-top {
+      justify-content: flex-end !important;
+      margin-bottom: 0; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main .paragraph-type-top button {
+        font-size: 0;
+        background: transparent;
+        border: transparent;
+        margin-top: 31px; }
+        .path-commander .node-commande-form.node-form .layout-region-node-main .paragraph-type-top button::after {
+          content: "\f1f8";
+          font-size: 25px;
+          padding: 10px;
+          color: #4ccfe0;
+          font-weight: 400;
+          font-family: FontAwesome; }
+        .path-commander .node-commande-form.node-form .layout-region-node-main .paragraph-type-top button::after:hover {
+          color: red; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .toggle-boolean {
+      /*background: #e9ecef;
+       width: 70%;
+      margin: 0 auto;*/ }
     .path-commander .node-commande-form.node-form .layout-region-node-main table {
-      width: 70%;
-      margin: 0 auto;
-      margin-bottom: -1px; }
+      	/*width: 70%;
+          margin: 0 auto;
+           margin-bottom: -1px;*/ }
       .path-commander .node-commande-form.node-form .layout-region-node-main table tr {
         background: #e9ecef; }
         .path-commander .node-commande-form.node-form .layout-region-node-main table tr:hover {
           background: #e9ecef; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main table td {
+        border-top: 1px solid #e9ecef; }
       .path-commander .node-commande-form.node-form .layout-region-node-main table thead th {
         background: #4ccfe0;
         text-align: center; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main table .form-type-number {
+        margin-top: 0px;
+        margin-bottom: 0px; }
       .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraphs-subform {
         display: -ms-flexbox;
         display: flex;
         align-items: center;
         padding: 22px;
-        padding: 0px 34px; }
+        padding: 0px 34px;
+        margin-top: -46px;
+        margin-bottom: 0px; }
+        .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraphs-subform .field--name-field-medicament {
+          margin: 0; }
+          .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraphs-subform .field--name-field-medicament fieldset {
+            margin: 0; }
+        .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraphs-subform .field--name-field-quantite {
+          margin: 0px;
+          margin-left: -37px; }
       .path-commander .node-commande-form.node-form .layout-region-node-main table .field-multiple-drag {
         display: none; }
       .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraph-type-title {
@@ -549,25 +590,32 @@ h2 {
     .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-medicaments-commandes, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
       margin-bottom: 0; }
     .path-commander .node-commande-form.node-form .layout-region-node-main .clearfix .paragraphs-dropbutton-wrapper {
-      width: 70%;
-      margin: 0 auto;
-      background: #e9ecef; }
-    .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
-      width: 70%;
-      margin: 0 auto;
+      padding: 0px 34px;
+      /*width:70%;
+      margin:0 auto;
       background: #e9ecef;
-      padding: 0px 34px; }
+          padding: 0px 34px;*/ }
+      .path-commander .node-commande-form.node-form .layout-region-node-main .clearfix .paragraphs-dropbutton-wrapper button {
+        background: #4ccfe0;
+        border: #4ccfe0; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
+      padding: 0px 34px;
+      	/*width:70%;
+      	margin:0 auto;
+      	background: #e9ecef;
+       padding: 0px 34px;*/ }
       .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste fieldset, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence fieldset {
         margin-bottom: 0; }
       .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste select, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence select {
         width: 60%; }
-      .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-grossiste input, .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence input {
-        width: 60%; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
+      display: none; }
   .path-commander .switch {
     position: relative;
     display: inline-block;
     width: 90px;
-    height: 34px; }
+    height: 34px;
+    margin: 17px 34px; }
   .path-commander .switch input {
     display: none; }
   .path-commander .slider {
@@ -577,7 +625,7 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ca2222;
+    background-color: #235196;
     -webkit-transition: .4s;
     transition: .4s; }
   .path-commander .slider:before {
@@ -591,7 +639,7 @@ h2 {
     -webkit-transition: .4s;
     transition: .4s; }
   .path-commander input:checked + .slider {
-    background-color: #2ab934; }
+    background-color: #4ccfe0; }
   .path-commander input:focus + .slider {
     box-shadow: 0 0 1px #2196F3; }
   .path-commander input:checked + .slider:before {
@@ -605,10 +653,14 @@ h2 {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
     font-size: 10px;
     font-family: Verdana, sans-serif;
-    padding: 17px 19px; }
+    padding: 17px 19px;
+    font-weight: bold; }
+  .path-commander .on {
+    left: 39%; }
+  .path-commander .off {
+    left: 59%; }
   .path-commander input:checked + .slider .on {
     display: block; }
   .path-commander input:checked + .slider .off {
@@ -617,5 +669,89 @@ h2 {
     border-radius: 34px; }
   .path-commander .slider.round:before {
     border-radius: 50%; }
+  .path-commander input {
+    background-color: #fbfbfb; }
+  .path-commander .layout-region-node-secondary {
+    display: none; }
+  .path-commander .layout-region-node-footer {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center; }
+    .path-commander .layout-region-node-footer #edit-actions button {
+      background: #4ccfe0;
+      border: #4ccfe0;
+      width: 178px; }
+      .path-commander .layout-region-node-footer #edit-actions button:hover {
+        background-color: #235196;
+        text-decoration: none;
+        transition: all ease-in 0.5s; }
+  .path-commander label {
+    display: none; }
+  .path-commander fieldset {
+    position: relative;
+    width: 89%; }
+  .path-commander .form-text {
+    margin-top: 0px; }
+  .path-commander :focus {
+    outline: none;
+    border: none;
+    box-shadow: none; }
+  .path-commander input[type="text"] {
+    border-radius: 0px;
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px; }
+  .path-commander input {
+    border: 1px solid #ccc;
+    padding: 7px 14px 9px;
+    transition: 0.4s; }
+  .path-commander input ~ .focus-border:before,
+  .path-commander input ~ .focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4ccfe0;
+    transition: 0.2s;
+    transition-delay: 0.2s; }
+  .path-commander input ~ .focus-border:after {
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: 0;
+    transition-delay: 0.6s; }
+  .path-commander input ~ .focus-border i:before,
+  .path-commander input ~ .focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: #4ccfe0;
+    transition: 0.2s; }
+  .path-commander input ~ .focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    transition-delay: 0.4s; }
+  .path-commander input:focus ~ .focus-border:before,
+  .path-commander input:focus ~ .focus-border:after {
+    width: 100%;
+    transition: 0.2s;
+    transition-delay: 0.6s; }
+  .path-commander input:focus ~ .focus-border:after {
+    transition-delay: 0.2s; }
+  .path-commander input:focus ~ .focus-border i:before,
+  .path-commander input:focus ~ .focus-border i:after {
+    height: 100%;
+    transition: 0.2s; }
+  .path-commander input:focus ~ .focus-border i:after {
+    transition-delay: 0.4s; }
 
 /*# sourceMappingURL=default.css.map */
