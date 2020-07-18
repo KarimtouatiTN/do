@@ -610,6 +610,8 @@ h2 {
         width: 60%; }
     .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
       display: none; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main td.tabledrag-hide, .path-commander .node-commande-form.node-form .layout-region-node-main th.tabledrag-hide {
+      display: none; }
   .path-commander .switch {
     position: relative;
     display: inline-block;
