@@ -71,16 +71,14 @@ if ($('.path-commander').length>0){
 
 
 
-jQuery(".field--name-field-medicament input").attr("placeholder", "Médicament");
-jQuery(".field--name-field-quantite input").attr("placeholder", "Quantité");
-jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
+ $('<div class="toggle-boolean"><label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"><span class="on">Urgente</span><span class="off">Normal</span><!--END--></div></label></div>').insertBefore('.field--name-field-grossiste')
+ //alert('fdfd')
 
 
 
-  $(' <span class="focus-border"><i></i></span>').insertAfter('input')
 
  // alert('ookiik');
-  $('<div class="toggle-boolean"><label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"><span class="on">Urgente</span><span class="off">Normal</span><!--END--></div></label></div>').insertBefore('.field--name-field-urgence');
+  
 
 
  $(document).on('click', '.on ', function () {
@@ -111,7 +109,19 @@ jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
 
   Drupal.behaviors.pharmacie_theme = {
     attach: function (context, settings) {
+      if ($('.path-commander').length>0){
 
+      jQuery(".field--name-field-medicament input").attr("placeholder", "Médicament");
+jQuery(".field--name-field-quantite input").attr("placeholder", "Quantité");
+jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
+
+  $(' <span class="focus-border"><i></i></span>').insertAfter('.paragraphs-subform input,.field--name-field-grossiste input');
+    $('.field-add-more-submit').text('Ajouter');
+         $('<div class="thead-med"><div>Mécicament</div><div>Quantitié</div></div>').insertAfter('table thead tr:nth-child(1)');
+
+
+
+}
 
     }
   };

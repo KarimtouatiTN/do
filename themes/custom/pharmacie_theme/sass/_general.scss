@@ -278,6 +278,7 @@
          margin-bottom: -1px;*/
          tr{
          	background: #e9ecef;
+         	border: none;
          	&:hover{
          		background: #e9ecef;
          	}
@@ -289,8 +290,14 @@
 
         thead{
         	th{
+        		padding-bottom: 0;
+        		h4{
+        		  margin: 0;
+        		}
 	         background: #4ccfe0;
 	         text-align: center;
+	         border-bottom: 1px solid #4ccfe0;
+	         //border: none;
           }
         }
         .form-type-number{
@@ -303,7 +310,7 @@
            align-items: center;
            padding: 22px;
            padding: 0px 34px;
-           margin-top: -46px;
+           margin-top: -71px;
             margin-bottom: 0px;
             .field--name-field-medicament{
             	margin: 0;
@@ -367,6 +374,48 @@ border: #4ccfe0;
     .field--name-field-urgence{
     	display: none;
     }
+    .paragraph-type-label,.paragraphs-icon-button-collapse{
+    	display: none;
+    }
+   
+    	.paragraphs-dropdown-toggle{
+    		display: none;
+    	}
+   
+
+    .paragraphs-dropdown{
+
+    margin-top: 55px;
+
+    	.paragraphs-dropdown-actions{
+    		display: block;
+    		border: none;
+    background: transparent;
+    box-shadow: none;
+        margin-top: -57px;
+button{
+               font-size: 0;
+    background: transparent;
+    border: transparent;
+    /* margin-top: 31px; */
+    border: none;
+    	&::after{
+        content:"\f1f8";
+      font-size: 25px;
+     padding: 10px;
+     color: #4ccfe0;
+    font-weight: 400;
+    font-family: FontAwesome;
+   
+
+    	}
+}
+
+    	}
+    	.field-dragdrop-mode-submit{
+    		display: none;
+    	}
+    }
 td.tabledrag-hide,th.tabledrag-hide{
 display: none;
 
@@ -374,6 +423,48 @@ display: none;
 }
 }
 
+.thead-med:nth-child(3){
+	display: none;
+}
+.thead-med{
+	width: 100%;
+    background: #4ccfe0;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+        padding-bottom: 14px;
+
+    >div{
+    	width: 50%;
+    text-align: center;
+    }
+}
+.clearfix{
+	.field-add-more-submit{
+	display: flex;
+    align-items: center;
+    background: #4ccfe0;
+    border: 0;
+    font-size: 14px;
+    padding: 0px 15px;
+    font-weight: bold;
+    margin: 0 34px;
+    height: 34PX;
+		&:after{
+    content: "\f0fe";
+    font-size: 25px;
+    padding: 3px 10px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: FontAwesome;
+		}
+	}
+}
 
 .switch {
   position: relative;
@@ -483,6 +574,7 @@ button{
 	 background: #4ccfe0;
 	 border:#4ccfe0;;
 	     width: 178px;
+	     font-weight: bold;
 	 &:hover{
 	 	    background-color: #235196;
     text-decoration: none;
@@ -524,10 +616,10 @@ input{border: 1px solid #ccc; padding: 7px 14px 9px; transition: 0.4s;}
 
 
 input ~ .focus-border:before,
-input ~ .focus-border:after{content: ""; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #4ccfe0; transition: 0.2s; transition-delay: 0.2s;}
+input ~ .focus-border:after{content: ""; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #a5b8d4; transition: 0.2s; transition-delay: 0.2s;}
 input ~ .focus-border:after{top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.6s;}
 input ~ .focus-border i:before,
-input ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4ccfe0; transition: 0.2s;}
+input ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #a5b8d4; transition: 0.2s;}
 input ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.4s;}
 input:focus ~ .focus-border:before,
 input:focus ~ .focus-border:after{width: 100%; transition: 0.2s; transition-delay: 0.6s;}

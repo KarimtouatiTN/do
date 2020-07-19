@@ -557,14 +557,19 @@ h2 {
           margin: 0 auto;
            margin-bottom: -1px;*/ }
       .path-commander .node-commande-form.node-form .layout-region-node-main table tr {
-        background: #e9ecef; }
+        background: #e9ecef;
+        border: none; }
         .path-commander .node-commande-form.node-form .layout-region-node-main table tr:hover {
           background: #e9ecef; }
       .path-commander .node-commande-form.node-form .layout-region-node-main table td {
         border-top: 1px solid #e9ecef; }
       .path-commander .node-commande-form.node-form .layout-region-node-main table thead th {
+        padding-bottom: 0;
         background: #4ccfe0;
-        text-align: center; }
+        text-align: center;
+        border-bottom: 1px solid #4ccfe0; }
+        .path-commander .node-commande-form.node-form .layout-region-node-main table thead th h4 {
+          margin: 0; }
       .path-commander .node-commande-form.node-form .layout-region-node-main table .form-type-number {
         margin-top: 0px;
         margin-bottom: 0px; }
@@ -574,7 +579,7 @@ h2 {
         align-items: center;
         padding: 22px;
         padding: 0px 34px;
-        margin-top: -46px;
+        margin-top: -71px;
         margin-bottom: 0px; }
         .path-commander .node-commande-form.node-form .layout-region-node-main table .paragraphs-subform .field--name-field-medicament {
           margin: 0; }
@@ -610,8 +615,69 @@ h2 {
         width: 60%; }
     .path-commander .node-commande-form.node-form .layout-region-node-main .field--name-field-urgence {
       display: none; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .paragraph-type-label, .path-commander .node-commande-form.node-form .layout-region-node-main .paragraphs-icon-button-collapse {
+      display: none; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .paragraphs-dropdown-toggle {
+      display: none; }
+    .path-commander .node-commande-form.node-form .layout-region-node-main .paragraphs-dropdown {
+      margin-top: 55px; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main .paragraphs-dropdown .paragraphs-dropdown-actions {
+        display: block;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        margin-top: -57px; }
+        .path-commander .node-commande-form.node-form .layout-region-node-main .paragraphs-dropdown .paragraphs-dropdown-actions button {
+          font-size: 0;
+          background: transparent;
+          border: transparent;
+          /* margin-top: 31px; */
+          border: none; }
+          .path-commander .node-commande-form.node-form .layout-region-node-main .paragraphs-dropdown .paragraphs-dropdown-actions button::after {
+            content: "\f1f8";
+            font-size: 25px;
+            padding: 10px;
+            color: #4ccfe0;
+            font-weight: 400;
+            font-family: FontAwesome; }
+      .path-commander .node-commande-form.node-form .layout-region-node-main .paragraphs-dropdown .field-dragdrop-mode-submit {
+        display: none; }
     .path-commander .node-commande-form.node-form .layout-region-node-main td.tabledrag-hide, .path-commander .node-commande-form.node-form .layout-region-node-main th.tabledrag-hide {
       display: none; }
+  .path-commander .thead-med:nth-child(3) {
+    display: none; }
+  .path-commander .thead-med {
+    width: 100%;
+    background: #4ccfe0;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding-bottom: 14px; }
+    .path-commander .thead-med > div {
+      width: 50%;
+      text-align: center; }
+  .path-commander .clearfix .field-add-more-submit {
+    display: flex;
+    align-items: center;
+    background: #4ccfe0;
+    border: 0;
+    font-size: 14px;
+    padding: 0px 15px;
+    font-weight: bold;
+    margin: 0 34px;
+    height: 34PX; }
+    .path-commander .clearfix .field-add-more-submit:after {
+      content: "\f0fe";
+      font-size: 25px;
+      padding: 3px 10px;
+      color: #ffffff;
+      font-weight: 400;
+      font-family: FontAwesome; }
   .path-commander .switch {
     position: relative;
     display: inline-block;
@@ -682,7 +748,8 @@ h2 {
     .path-commander .layout-region-node-footer #edit-actions button {
       background: #4ccfe0;
       border: #4ccfe0;
-      width: 178px; }
+      width: 178px;
+      font-weight: bold; }
       .path-commander .layout-region-node-footer #edit-actions button:hover {
         background-color: #235196;
         text-decoration: none;
@@ -717,7 +784,7 @@ h2 {
     right: 0;
     width: 0;
     height: 2px;
-    background-color: #4ccfe0;
+    background-color: #a5b8d4;
     transition: 0.2s;
     transition-delay: 0.2s; }
   .path-commander input ~ .focus-border:after {
@@ -734,7 +801,7 @@ h2 {
     left: 0;
     width: 2px;
     height: 0;
-    background-color: #4ccfe0;
+    background-color: #a5b8d4;
     transition: 0.2s; }
   .path-commander input ~ .focus-border i:after {
     left: auto;
