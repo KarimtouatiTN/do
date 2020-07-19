@@ -1,0 +1,7 @@
+<?php
+
+function ph_grossiste_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'ph_grossiste/general';
+}
+
+?>
