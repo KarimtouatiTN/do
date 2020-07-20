@@ -13,22 +13,22 @@ $animate: all 0.2s ease-in-out;
       }
       .bg-hover-map{
         .land{          
-          fill: #4CCFE0;
-          stroke: #4CCFE0;
+          fill: #235196;
+          stroke: #235196;
       }
     }
   }
 
 .land:hover{
-      fill: #4CCFE0;
-      stroke: #4CCFE0;
+      fill: #235196;
+      stroke: #235196;
  } 
 
 .region-map-tun{
   display: inherit;
   .content{
 
-    background: whitesmoke;
+    background: #4ccfe0;
     //display: -ms-flex;
     //justify-content: center;
     /*background: #66CBB1;
@@ -83,9 +83,9 @@ $animate: all 0.2s ease-in-out;
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    border: 2px solid #fff;
-    color: #235196;
-    background-color: #235196;
+    border: 1px solid #235196;
+    color: #ffffff;
+    background-color: #fff;
     margin: 5px 10px 3px -7px;
     padding: 2px;
 
@@ -94,7 +94,7 @@ $animate: all 0.2s ease-in-out;
     width: 100%;
   }
   a:hover{
-   //background: #56b847;
+   //background: #235196;
    text-decoration: none;
   }
  }
@@ -107,13 +107,13 @@ li{
     flex-flow: row nowrap;
     align-items: center;
     margin: 0 0 45px;
-     color:#235196;
+         color: #ffffff;
     .hover {
       margin: 0 auto;
       padding: 0;
       transition: $animate;
       position: relative;
-       color:#235196;
+         color: #ffffff;
        font-weight: bold;
       &:before,
       &:after {
@@ -126,7 +126,7 @@ li{
         transition: $animate;
         transition-duration: 0.75s;
         opacity: 0;
-        background-color: #235196;
+        background-color: #fff;
       }
     
    
@@ -308,9 +308,19 @@ p + p {
 
 .contact-message-contact-form{
   //width:50%;
-    background-image: url(/themes/custom/pharmacie_theme/images/img-01.png);
-    background-position: right 10% bottom 45%;
-    background-repeat: no-repeat;
+   // background-image: url(/themes/custom/pharmacie_theme/images/img-01.png);
+    //background-position: right 10% bottom 45%;
+    //background-repeat: no-repeat;
+    .content{
+      display: -ms-flexbox;
+          display: flex;
+    justify-content: center;
+    }
+    #edit-actions{
+      display: -ms-flexbox;
+      display: flex;
+    justify-content: center;
+    }
   fieldset{
     label{
       display: none
@@ -324,12 +334,12 @@ input,textarea{
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:40%;
+  //width:40%;
   border:none;
   border-bottom:1px solid #757575;
 }
 textarea{
-  width:60%;
+ // width:60%;
 }
 
 input:focus     { 
@@ -342,6 +352,20 @@ input:focus     {
   display: none;
 }
 }
+
+.contact-message-newsletter__form{
+   .content{
+        
+form{
+ 
+
+    label{
+      display: none;
+    }
+  }
+}
+}
+
   .view-header{
     text-align: center;
   }
