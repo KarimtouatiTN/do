@@ -378,12 +378,8 @@
 .contact-message-contact-form #edit-preview {
   display: none; }
 
-.contact-message-newsletter__form {
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center; }
-  .contact-message-newsletter__form .content form label {
-    display: none; }
+.contact-message-newsletter__form .content form label {
+  display: none; }
 
 .view-header {
   text-align: center; }
