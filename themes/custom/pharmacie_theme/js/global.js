@@ -10,6 +10,12 @@
  (function ($) {
 	 
 if ($('.path-frontpage').length>0){
+
+//$('.block-views-blockcustomer-view-block-1').append($('.compteur-front'));
+
+
+
+
   let panel2 = document.querySelector('.panel:nth-child(2)');
 
 setTimeout( function() {

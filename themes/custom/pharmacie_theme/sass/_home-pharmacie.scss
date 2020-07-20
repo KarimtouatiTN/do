@@ -13,15 +13,15 @@ $animate: all 0.2s ease-in-out;
       }
       .bg-hover-map{
         .land{          
-          fill: #4CCFE0;
-          stroke: #4CCFE0;
+          fill: #235196;
+          stroke: #235196;
       }
     }
   }
 
 .land:hover{
-      fill: #4CCFE0;
-      stroke: #4CCFE0;
+      fill: #235196;
+      stroke: #235196;
  } 
 
 .region-map-tun{
@@ -308,9 +308,19 @@ p + p {
 
 .contact-message-contact-form{
   //width:50%;
-    background-image: url(/themes/custom/pharmacie_theme/images/img-01.png);
-    background-position: right 10% bottom 45%;
-    background-repeat: no-repeat;
+   // background-image: url(/themes/custom/pharmacie_theme/images/img-01.png);
+    //background-position: right 10% bottom 45%;
+    //background-repeat: no-repeat;
+    .content{
+      display: -ms-flexbox;
+          display: flex;
+    justify-content: center;
+    }
+    #edit-actions{
+      display: -ms-flexbox;
+      display: flex;
+    justify-content: center;
+    }
   fieldset{
     label{
       display: none
@@ -324,12 +334,12 @@ input,textarea{
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:40%;
+  //width:40%;
   border:none;
   border-bottom:1px solid #757575;
 }
 textarea{
-  width:60%;
+ // width:60%;
 }
 
 input:focus     { 
@@ -342,6 +352,23 @@ input:focus     {
   display: none;
 }
 }
+
+.contact-message-newsletter__form{
+  display: -ms-flexbox;
+      display: flex;
+    justify-content: center;
+  .content{
+        
+form{
+ 
+
+    label{
+      display: none;
+    }
+  }
+}
+}
+
   .view-header{
     text-align: center;
   }

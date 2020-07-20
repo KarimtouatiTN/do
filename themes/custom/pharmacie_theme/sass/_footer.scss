@@ -1,0 +1,13 @@
+.site-footer {
+    padding: 28px 0;
+    margin-top: 100px;
+}
+
+#page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+#main-wrapper {
+    flex-grow: 1;
+}
+}
