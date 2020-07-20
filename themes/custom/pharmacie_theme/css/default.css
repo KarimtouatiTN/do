@@ -172,7 +172,7 @@
 .region-map-tun {
   display: inherit; }
   .region-map-tun .content {
-    background: whitesmoke;
+    background: #4ccfe0;
     /*background: #66CBB1;
     background: -moz-linear-gradient(top, #66CBB1 0%, #66CBB1 100%);
     background: -webkit-linear-gradient(top, #66CBB1 0%, #66CBB1 100%);
@@ -215,9 +215,9 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    border: 2px solid #fff;
-    color: #235196;
-    background-color: #235196;
+    border: 1px solid #235196;
+    color: #ffffff;
+    background-color: #fff;
     margin: 5px 10px 3px -7px;
     padding: 2px; }
   .list-region .list-region-1 ul a {
@@ -229,13 +229,13 @@
     flex-flow: row nowrap;
     align-items: center;
     margin: 0 0 45px;
-    color: #235196; }
+    color: #ffffff; }
     .list-region li .hover {
       margin: 0 auto;
       padding: 0;
       transition: all 0.2s ease-in-out;
       position: relative;
-      color: #235196;
+      color: #ffffff;
       font-weight: bold; }
       .list-region li .hover:before, .list-region li .hover:after {
         content: "";
@@ -247,7 +247,7 @@
         transition: all 0.2s ease-in-out;
         transition-duration: 0.75s;
         opacity: 0;
-        background-color: #235196; }
+        background-color: #fff; }
       .list-region li .hover.dsg:before {
         left: 30%; }
       .list-region li .hover.dsg:after {

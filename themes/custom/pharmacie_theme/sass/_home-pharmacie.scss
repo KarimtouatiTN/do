@@ -28,7 +28,7 @@ $animate: all 0.2s ease-in-out;
   display: inherit;
   .content{
 
-    background: whitesmoke;
+    background: #4ccfe0;
     //display: -ms-flex;
     //justify-content: center;
     /*background: #66CBB1;
@@ -83,9 +83,9 @@ $animate: all 0.2s ease-in-out;
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    border: 2px solid #fff;
-    color: #235196;
-    background-color: #235196;
+    border: 1px solid #235196;
+    color: #ffffff;
+    background-color: #fff;
     margin: 5px 10px 3px -7px;
     padding: 2px;
 
@@ -94,7 +94,7 @@ $animate: all 0.2s ease-in-out;
     width: 100%;
   }
   a:hover{
-   //background: #56b847;
+   //background: #235196;
    text-decoration: none;
   }
  }
@@ -107,13 +107,13 @@ li{
     flex-flow: row nowrap;
     align-items: center;
     margin: 0 0 45px;
-     color:#235196;
+         color: #ffffff;
     .hover {
       margin: 0 auto;
       padding: 0;
       transition: $animate;
       position: relative;
-       color:#235196;
+         color: #ffffff;
        font-weight: bold;
       &:before,
       &:after {
@@ -126,7 +126,7 @@ li{
         transition: $animate;
         transition-duration: 0.75s;
         opacity: 0;
-        background-color: #235196;
+        background-color: #fff;
       }
     
    
