@@ -4,6 +4,19 @@
 .site-footer {
   padding: 28px 0;
   margin-top: 100px; }
+  .site-footer #block-copyright, .site-footer .contact-message-newsletter__form {
+    border: none; }
+  .site-footer .region-footer-second a {
+    color: #fff; }
+  .site-footer .copy-right {
+    color: #fff; }
+  .site-footer .social-media-links {
+    display: flex;
+    list-style: none; }
+    .site-footer .social-media-links a {
+      border: none !important;
+      font-size: 20px;
+      margin-right: 10px; }
 
 #page {
   min-height: 100vh;
