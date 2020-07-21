@@ -106,7 +106,8 @@
   text-decoration: none;
   background-color: #4ccfe0; }
 .header-menu-connexion .template-user-menu .dropdown-menu a:hover {
-  color: #235196; }
+  color: #fff;
+  background: #4ccfe0; }
 .header-menu-connexion .template-user-menu .dropdown-menu .user-profile:before {
   content: "\f2c1";
   font-size: 25px;
