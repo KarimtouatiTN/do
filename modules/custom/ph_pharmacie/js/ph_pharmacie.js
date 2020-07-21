@@ -6,7 +6,7 @@
     jQuery('.custom-tab-pane').wrapAll('<div class="tab-content"></div>>');
   }
 
-  if (jQuery('#block-views-block-notifications-pharmacie-block-1').length > 0) {
+  if (jQuery('.block-views-blocknotifications-pharmacie-block-1').length > 0) {
     jQuery('#edit-chat-sender').val(jQuery('#dropdownMenuLink').html().replace(/\ /g, ''))
     jQuery('#custom-submit').attr('value', jQuery('#global-notif').val() - jQuery('#dernier-acces').val())
   }
@@ -14,7 +14,7 @@
 
   Drupal.behaviors.pharmacie = {
     attach: function () {
-      if (jQuery('#block-views-block-notifications-pharmacie-block-1').length > 0) {
+      if (jQuery('.block-views-blocknotifications-pharmacie-block-1').length > 0) {
         jQuery('#global-notif').val(jQuery('#dropdownMenuLink').html().replace(/\ /g, ''))
         jQuery('#custom-submit').attr('value', jQuery('#global-notif').val() - jQuery('#dernier-acces').val())
         jQuery('#custom-submit').click(function () {
