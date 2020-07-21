@@ -12,7 +12,7 @@
  }
 }
 #navbar-main  {
-    background-color: #fff!important;
+    background-color: #e7edf4 !important;
     border: none;
     box-shadow: none;
 }
@@ -41,106 +41,14 @@ $light-black: rgba(0,0,0,.1);
 *::after {boxsizing:border-box;}
 
 
-.menu_container {
-  position: fixed;
-  z-index: 2000; 
-  .btn_container {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    top: 20px;
-    left: 13%;
-    background-color: transparent;
-    span {
-      position: absolute;
-      width: 50px;
-      height: 5px;
-      border-radius:2px;
-      background-color: #4ccfe0;
-    }
-    span:nth-child(2) {
-      top: 8px;
-      left:0px;
-      width: 50px;
-      @include transition(300ms);
-    }
-    span:nth-child(3) {
-      top: 16px;
-      left:0px;
-      width: 50px;
-      @include transition(400ms);
-    }
-      span:nth-child(4) {
-     top: 24px;
-      left:0px;
-      width: 50px;
-      @include transition(400ms);
-    }
-    &:hover {
-      cursor: pointer;
-      span:nth-child(2),
-      span:nth-child(3) {
-        width: 50px;
-      }
-    }
-  }
-  .over_lay {
-    position: fixed;
-        top: 70px;
-    width: 0%;
-    height: 100%;
-    background-color: $light-black;
-    @include transition(500ms);
-  }
-  .list_items_container {
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    left:-300px;
-    top:0px;
-    background-color: $off-w;
-    @include transition(400ms);
-    p {
-          width: 100%;
-    background: #fff;
-    margin: 0px;
-    padding: 15px 0px;
-    font-size: 33px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: lighter;
-    color: #44bac9;
-      &:hover {
-        cursor: pointer;
-        box-shadow: 0px 1px 4px #000;
-      }
-    }
-    .list_box {
-      a {
-        display: inline-block;
-        width: 100%;
-        text-align:center;
-        text-decoration: none;
-        padding: 10px 0px;
-        font-size: 27px;
-        color: #1f4987;
-        @include transition(500ms);
-        &:hover {
-          border-left: 10px solid #44bac9;
-          color:#44bac9;
-        }
-      }
-    }
-  }
-}
 
 .fixed-top{
-
-    height: 70px;
-    background: #e7edf4 !important;
+    height: 58px;
+    background: #fff !important;
+        box-shadow: 0px 0px 10px #e5e5e5;
 }
 .bg-primary{
-	    //margin-top: 70px;
+	    margin-top: 55px;
 }
 .menu-navigation-top{
 	h1{
@@ -148,6 +56,11 @@ $light-black: rgba(0,0,0,.1);
 	}
 }
 
+
+ 
+.region-top-header-form{
+	   margin-top: -5px;
+}
 .se-connecter{
 	a{
        color: #235196;
@@ -155,6 +68,7 @@ $light-black: rgba(0,0,0,.1);
     text-transform: uppercase;
     font-size: 16px;
         font-weight: 500;
+        padding: 0px;
     &:hover{
     	color:#44bac9;
     }
@@ -170,4 +84,80 @@ $light-black: rgba(0,0,0,.1);
 			color:#44bac9;
 
 		}
+}
+
+
+.header-menu-connexion{
+	.template-user-menu{
+     #dropdownMenuButton{
+     	       background: #fff;
+    color: #000;
+    /* border: 1px solid #4ccfe0; */
+    border: none;
+    padding: 0px 41px;
+  
+     }
+      
+      .dropdown,.dropdown-menu{
+        border: 0.5px solid #e7edf4;
+    border-radius: 5px;
+    width: 315px;
+      }
+     .img-profile{
+       img{
+    height: 50px;
+    width: 50px;
+    border: 0.5px solid #4ccfe0;
+    border-radius: 100%;
+       }
+
+     }
+     .field-nom,.field-prenom{
+     	font-size: 13px;
+    margin-left: 13px;
+     }
+     .dropdown-menu{
+     	a:active{
+       color: #fff;
+    text-decoration: none;
+    background-color: #4ccfe0;
+     	}
+     	a:hover{
+     		color: #235196;
+     	}
+
+     .user-profile:before{
+  content:"\f2c1";
+    font-size: 25px;
+    padding: 3px 10px;
+   color: #878a8c;
+    font-weight: 400;
+    font-family: FontAwesome;
+     }
+     .settings:before{
+     content:"\f0ad";
+    font-size: 25px;
+    padding: 3px 10px;
+   color: #878a8c;
+    font-weight: 400;
+    font-family: FontAwesome;
+     }
+     a:nth-child(3):before{
+     	 content:"\f0ad";
+    font-size: 25px;
+    padding: 3px 10px;
+   color: #878a8c;
+    font-weight: 400;
+    font-family: FontAwesome;
+     }
+     .dcnx:before{
+     	content:"\f08b";
+    font-size: 25px;
+    padding: 3px 10px;
+   color: #878a8c;
+    font-weight: 400;
+    font-family: FontAwesome;
+     }
+ }
+	}
 }

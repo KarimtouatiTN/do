@@ -35,12 +35,38 @@ function pharmacie_theme_form_system_theme_settings_alter(&$form, FormStateInter
 
 
 
-function  proimfo_mytheme_preprocess_page(&$variables) {
+/*
 
-  if (!empty($variables['page']['highlighted'])) {
-    $variables['page']['highlighted']['#attributes']['class'][] = 'modal fade';
-    $variables['page']['highlighted']['#attributes']['data-toggle'][] = 'modal';
+function pharmacie_theme_preprocess_page(&$vars) {
+  if ($vars['user']) {
+    foreach($vars['user']->roles as $key => $role){
+      $vars['class'][] = 'role-' . drupal_html_class($role);
+    }
   }
 }
+
+
+
+
+function pharmacie_theme_preprocess_html(&$vars, $hook) {
+  if ($vars['user']) {
+    foreach($vars['user']->roles as $key => $role){
+      $role_class = 'role-' . drupal_clean_css_identifier($role);
+      $vars['classes_array'][] = $role_class;
+    }
+  }
+}
+
+
+function pharmacie_theme_preprocess_html(&$vars) {
+  if (!empty($GLOBALS['user']->roles)) {
+    foreach ($GLOBALS['user']->roles as $rid => $role_name) {
+      $vars['classes_array'][] = drupal_clean_css_identifier("drupal-role-$rid-$role_name");
+    }
+  }
+}
+*/
+
+
 
 
