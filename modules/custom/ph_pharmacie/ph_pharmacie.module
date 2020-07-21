@@ -42,8 +42,7 @@ function ph_pharmacie_views_query_alter(ViewExecutable $view, QueryPluginBase $q
       $villeId = $profile->get("field_ville")->getValue()[0]['target_id'];
       $view->query->where[0]['type'] = "OR";
       $view->query->where[0]['conditions'][1]['value'][':node__field_ville_field_ville_target_id'] = (int)$villeId;
-      $view->query->where[3]['conditions'][0]['value'][0]=(int)\Drupal::currentUser()->id();
+      $view->query->where[3]['conditions'][0]['value'][0] = \Drupal::currentUser()->id();
     }
-
   }
 }
