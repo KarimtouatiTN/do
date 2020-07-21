@@ -1,6 +1,10 @@
 <?php
 
-function ph_pharmacie_page_attachments(array &$page) {
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+
+function ph_pharmacie_page_attachments(array &$page)
+{
   $page['#attached']['library'][] = 'ph_pharmacie/general';
 }
 
@@ -21,8 +25,26 @@ function sauvegarder_circulaire_mdo(&$form, \Drupal\Core\Form\FormStateInterface
   $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
   $storage = \Drupal::entityTypeManager()->getStorage('profile');
   $profile = $storage->loadByUser($user, 'pharmacie');
-  $villeId=$profile->get("field_ville")->getValue()[0]['target_id'];
+  $villeId = $profile->get("field_ville")->getValue()[0]['target_id'];
   $node = \Drupal\node\Entity\Node::load($form_state->getValue('nid'));
-  $node->set('field_ville',  $villeId);
+  $node->set('field_ville', $villeId);
   $node->save();
+}
+
+
+function ph_pharmacie_views_query_alter(ViewExecutable $view, QueryPluginBase $query)
+{
+  if ($view->id() == "notifications_pharmacie") {
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $storage = \Drupal::entityTypeManager()->getStorage('profile');
+    $profile = $storage->loadByUser($user, 'pharmacie');
+    if ($profile && $user->hasRole('pharmacie')) {
+
+      $villeId = $profile->get("field_ville")->getValue()[0]['target_id'];
+      $view->query->where[0]['type'] = "OR";
+      $view->query->where[0]['conditions'][1]['value'][':node__field_ville_field_ville_target_id'] = (int)$villeId;
+      $view->query->where[3]['conditions'][0]['value'][0]=(int)\Drupal::currentUser()->id();
+    }
+
+  }
 }
