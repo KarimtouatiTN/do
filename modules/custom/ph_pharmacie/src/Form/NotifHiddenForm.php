@@ -51,7 +51,7 @@ class notifHiddenForm extends FormBase
       '#suffix' => '</div>',
     ];
 
-    $form['submit'] = [
+    $form['custom_submit'] = [
       '#type' => 'button',
       '#value' => $this->t('0'),
       "#id"=>'custom-submit',
