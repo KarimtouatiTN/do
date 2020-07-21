@@ -83,4 +83,9 @@ class notifHiddenForm extends FormBase
     return $form['output'];
   }
 
+
+  public function submitForm(array &$form, FormStateInterface $form_state)
+  {
+    // TODO: Implement submitForm() method.
+  }
 }
