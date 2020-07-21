@@ -8,7 +8,21 @@
  
  
  (function ($) {
-	 
+/*
+  if ($('body').length>0){
+
+if (!$('body').hasClass("user-logged-in")){
+   $('.fixed-top').remove();
+    $('.bg-primary').removeClass('menu-nav-ht');
+
+
+}
+else{
+ 
+  $('.bg-primary').addClass('menu-nav-ht');
+}
+}
+	*/ 
 if ($('.path-frontpage').length>0){
 
 //$('.block-views-blockcustomer-view-block-1').append($('.compteur-front'));

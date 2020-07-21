@@ -632,3 +632,13 @@ input:focus ~ .focus-border i:after{transition-delay: 0.4s;}
 
 
 }
+
+
+
+
+
+.adminimal-admin-toolbar{
+  .navbar.fixed-top{
+    display: none
+  }
+}
