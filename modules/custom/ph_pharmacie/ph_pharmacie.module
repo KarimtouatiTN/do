@@ -39,7 +39,6 @@ function ph_pharmacie_views_query_alter(ViewExecutable $view, QueryPluginBase $q
     $storage = \Drupal::entityTypeManager()->getStorage('profile');
     $profile = $storage->loadByUser($user, 'pharmacie');
     if ($profile && $user->hasRole('pharmacie')) {
-      die(var_dump($view->query->where));
       $villeId = $profile->get("field_ville")->getValue()[0]['target_id'];
       $view->query->where[0]['type'] = "OR";
       $view->query->where[0]['conditions'][1]['value'][':node__field_ville_field_ville_target_id'] = (int)$villeId;
