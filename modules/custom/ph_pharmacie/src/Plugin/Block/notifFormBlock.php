@@ -28,7 +28,7 @@ class notifFormBlock extends BlockBase
 
   public function build()
   {
-    $form = \Drupal::formBuilder()->getForm('Drupal\ph_pharmacie\Form\notifHiddenForm');
+    $form = \Drupal::formBuilder()->getForm('Drupal\ph_pharmacie\Form\NotifHiddenForm');
 
       return $form;
   }
