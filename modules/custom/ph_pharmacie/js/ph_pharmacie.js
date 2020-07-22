@@ -16,6 +16,16 @@
     jQuery('#shown-button-notif').click(function () {
       jQuery('#custom-submit').click()
     })
+    jQuery('#shown-button-notif').click(function () {
+      jQuery("#block-notifpharmaciebutton .dropdown .view-content.row").remove()
+      jQuery('.btn-hide .view-content.row').clone().prependTo(jQuery("#block-notifpharmaciebutton .dropdown"));
+      jQuery('.dropdown .view-content.row').addClass('dropdown-menu');
+      if ((jQuery('#block-notifpharmaciebutton .dropdown').hasClass('show')) == true) {
+        jQuery('#block-notifpharmaciebutton  .view-content.row.dropdown-menu').addClass('show')
+      }else {
+        jQuery('#block-notifpharmaciebutton  .view-content.row.dropdown-menu').removeClass('show')
+      }
+    })
     jQuery('#custom-submit').hide()
     jQuery('.btn-hide .view-content.row').hide()
     jQuery('#block-notifpharmaciebutton  .view-content.row.dropdown-menu').removeAttr("style");
@@ -34,7 +44,6 @@
         jQuery('#custom-submit').html(jQuery('#global-notif').val() - jQuery('#dernier-acces').val())
         jQuery('#shown-button-notif').html(jQuery('#custom-submit').html())
         jQuery('#shown-button-notif').click(function () {
-          jQuery('#custom-submit').click();
           jQuery("#block-notifpharmaciebutton .dropdown .view-content.row").remove()
           jQuery('.btn-hide .view-content.row').clone().prependTo(jQuery("#block-notifpharmaciebutton .dropdown"));
           jQuery('.dropdown .view-content.row').addClass('dropdown-menu');
@@ -43,6 +52,11 @@
           }else {
             jQuery('#block-notifpharmaciebutton  .view-content.row.dropdown-menu').removeClass('show')
           }
+        })
+
+        //          jQuery('#custom-submit').click();
+        jQuery('#shown-button-notif').click(function () {
+          jQuery('#custom-submit').click()
         })
         jQuery('#custom-submit').hide()
         jQuery('#custom-submit').click(function () {
