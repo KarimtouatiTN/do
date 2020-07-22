@@ -38,6 +38,7 @@ class notifHiddenForm extends FormBase
     $form['chat_sender'] = [
       '#type' => 'textfield',
       "#id"=>'global-notif',
+//      "#access"=>false,
       '#title' => $this->t('global'),
     ];
 
@@ -46,13 +47,14 @@ class notifHiddenForm extends FormBase
       '#type' => 'textfield',
       "#id"=>'dernier-acces',
       '#title' => $this->t('dernier accés'),
+//      "#access"=>false,
       '#value'=>$profile->get('field_nb_notif_dernier')->getValue()[0]['value'],
       '#prefix' => '<div id="edit-nb">',
       '#suffix' => '</div>',
     ];
 
     $form['custom_submit'] = [
-      '#type' => 'button',
+      '#type' => 'submit',
       '#value' => $this->t('0'),
       "#id"=>'custom-submit',
       '#ajax' => [
