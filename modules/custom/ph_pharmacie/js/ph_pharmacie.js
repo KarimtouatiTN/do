@@ -8,6 +8,8 @@
   }
   if (jQuery('.block-views-blocknotifications-pharmacie-block-1').length > 0) {
     jQuery('#dropdownMenuLink').hide()
+    jQuery('.ajax-progress-throbber').remove()
+
     jQuery('#global-notif').hide()
     jQuery('#dernier-acces').hide()
     jQuery('#global-notif').val(jQuery('#dropdownMenuLink').html().replace(/\ /g, ''))
@@ -17,6 +19,8 @@
       jQuery('#custom-submit').click()
     })
     jQuery('#shown-button-notif').click(function () {
+      jQuery('.ajax-progress-throbber').remove()
+
       jQuery("#block-notifpharmaciebutton .dropdown .view-content.row").remove()
       jQuery('.btn-hide .view-content.row').clone().prependTo(jQuery("#block-notifpharmaciebutton .dropdown"));
       jQuery('.dropdown .view-content.row').addClass('dropdown-menu');
@@ -35,6 +39,7 @@
   Drupal.behaviors.pharmacie = {
     attach: function () {
       if (jQuery('.block-views-blocknotifications-pharmacie-block-1').length > 0) {
+        jQuery('.ajax-progress-throbber').remove()
         jQuery('#dropdownMenuLink').hide()
         jQuery('#global-notif').hide()
         jQuery('#dernier-acces').hide()
@@ -56,6 +61,7 @@
 
         //          jQuery('#custom-submit').click();
         jQuery('#shown-button-notif').click(function () {
+          jQuery('.ajax-progress-throbber').remove()
           jQuery('#custom-submit').click()
         })
         jQuery('#custom-submit').hide()
