@@ -39,14 +39,14 @@ class notifHiddenForm extends FormBase
       '#type' => 'textfield',
       "#id"=>'global-notif',
 //      "#access"=>false,
-      '#title' => $this->t('global'),
+//      '#title' => $this->t('global'),
     ];
 
 
     $form['output'] = [
       '#type' => 'textfield',
       "#id"=>'dernier-acces',
-      '#title' => $this->t('dernier accés'),
+//      '#title' => $this->t('dernier accés'),
 //      "#access"=>false,
       '#value'=>$profile->get('field_nb_notif_dernier')->getValue()[0]['value'],
       '#prefix' => '<div id="edit-nb">',
