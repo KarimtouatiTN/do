@@ -144,51 +144,53 @@
   .notif-hidden-form .message, .notif-hidden-form label, .notif-hidden-form input:not(#custom-submit) {
     display: none; }
 
-#block-views-block-notifications-pharmacie-block-1 .content {
-  	/*background: #f7f7f7;
-      border-radius: 3px;
-      width: 186px;
-      margin-top: 39px;
-      margin-left: 5px;
-      border: 1px solid #4ccfe0;
-      padding: 7px 67px;
-      text-align: left;
-      display: flex;
-      justify-content: flex-end;*/ }
-  #block-views-block-notifications-pharmacie-block-1 .content .btn-hide {
-    display: none; }
-  #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie {
-    background: #f7f7f7;
+/*
+#block-views-block-notifications-pharmacie-block-1{
+	.content{
+		.btn-hide{
+			 display: none; 
+		}
+		.view-notifications-pharmacie{
+    
+        background: #f7f7f7;
     border-radius: 3px;
     position: fixed;
     width: 208px;
-    /* top: 27%; */
-    margin-top: 26px;
+   
+      margin-top: 26px;
     margin-left: -170px;
     border: 1px solid #4ccfe0;
     padding: 0px 1px 5px 2px;
-    text-align: left; }
-    #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content {
-      margin-left: 0px; }
-      #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list {
-        width: 200px; }
-        #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list li {
-          border-bottom: 1px solid #bdbdbd; }
-        #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list li:last-child {
-          border: none !important; }
-        #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list a:hover, #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list a:active, #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list li:hover, #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list li:active {
-          color: #fff;
-          background: #4ccfe0; }
-      #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie .view-content .item-list:before {
-        content: "Notification";
-        color: #235196;
-        background: white;
-        width: 100%;
-        display: block;
-        padding-left: 19px;
-        padding-top: 10px; }
-  #block-views-block-notifications-pharmacie-block-1 .content .view-notifications-pharmacie:before {
-    content: '';
+    text-align: left;
+    .view-content{
+    	margin-left: 0px;
+    	.item-list{
+    		width: 200px;
+    		li{ border-bottom: 1px solid #bdbdbd;}
+           
+               li:last-child{
+            	border:none !important;
+            }
+            a:hover,a:active,li:hover,li:active{
+            	color: #fff;
+     		  background: #4ccfe0;
+            }
+    		
+    	}
+    .item-list:before {
+    content: "Notification";
+    color: #235196;
+    background: white;
+    width: 100%;
+    display: block;
+    padding-left: 19px;
+        padding-top: 10px;
+}
+    }
+
+	    }
+	     .view-notifications-pharmacie:before{
+	  content: '';
     display: block;
     width: 0;
     width: 0;
@@ -199,19 +201,25 @@
     border-color: transparent transparent #4ccfe0 transparent;
     height: 0;
     position: absolute;
-    /* border-top: 18px solid transparent; */
+
     border-bottom: -2px solid transparent;
-    /* border-right: 28px solid #4ccedf; */
+
     left: 156px;
-    top: -18px; }
-  #block-views-block-notifications-pharmacie-block-1 .content #custom-submit {
+    top: -18px;
+		}
+
+
+		
+
+
+	 #custom-submit{
     background: none;
     border: none;
     color: #080808;
     height: 19px;
     font-size: 12px;
     width: 13px;
-    cursor: pointer;
+    cursor:pointer;
     background: red;
     border-radius: 4px;
     text-align: center;
@@ -219,22 +227,33 @@
     padding: 0;
     color: #fff;
     font-weight: bold;
-    position: relative; }
-  #block-views-block-notifications-pharmacie-block-1 .content button#custom-submit:focus {
+    position: relative;
+  }
+
+button#custom-submit:focus {
     border: none;
-    box-shadow: none; }
-  #block-views-block-notifications-pharmacie-block-1 .content #custom-submit::after {
-    content: "\f0f3";
-    font-size: 25px;
+    box-shadow: none;
+}
+
+
+   #custom-submit::after{
+  	content:"\f0f3";
+  	font-size: 25px;
     padding: 3px 10px;
-    color: #235196;
+   color: #235196;
     font-weight: 400;
     font-family: FontAwesome;
     position: absolute;
-    margin-left: -34px; }
-  #block-views-block-notifications-pharmacie-block-1 .content .show {
-    display: block !important; }
+        margin-left: -34px;
+  }
+.show{
+	display: block !important;
+}
+	}
 
+	} 
+
+	*/
 .view-notifications-pharmacie .view-header {
   display: none; }
 

@@ -184,7 +184,7 @@ jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
 }
 
 
-
+/*
 if ($('header').length>0){
 
   $("#block-views-block-notifications-pharmacie-block-1 button").click(function(){
@@ -201,24 +201,13 @@ $(".btn-hide").hide();
 
 
 
-
-
-  
-
-        
-
-
-
   });
 
   $('#block-views-block-notifications-pharmacie-block-1 .content').prepend($('#custom-submit'));
-
-                  $("#custom-submit:contains('0')").css('background','white');
-               
-
+    $("#custom-submit:contains('0')").css('background','white');             
 }
 
-
+*/
     }
   };
 
