@@ -166,22 +166,13 @@ $light-black: rgba(0,0,0,.1);
 	}
 }
 
-/*
-.notif-hidden-form{
-	margin-right: 55px;
-  .message,label,input:not(#custom-submit){
-  	display: none;
-  }
 
 
 
-}
-
-#block-views-block-notifications-pharmacie-block-1{
+#block-notifpharmaciebutton{
+	    margin-right: 34px;
 	.content{
-		.btn-hide{
-			 display: none; 
-		}
+		
 		.view-notifications-pharmacie{
     
         background: #f7f7f7;
@@ -244,8 +235,8 @@ $light-black: rgba(0,0,0,.1);
 		
 
 
-	 #custom-submit{
-    background: none;
+	 #shown-button-notif{
+
     border: none;
     color: #080808;
     height: 19px;
@@ -260,15 +251,19 @@ $light-black: rgba(0,0,0,.1);
     color: #fff;
     font-weight: bold;
     position: relative;
+
   }
 
-button#custom-submit:focus {
+#shown-button-notif:focus {
     border: none;
     box-shadow: none;
 }
 
+#shown-button-notif::after{
+ content: inherit;	
+ }
 
-   #custom-submit::after{
+   #shown-button-notif::before{
   	content:"\f0f3";
   	font-size: 25px;
     padding: 3px 10px;
@@ -276,16 +271,14 @@ button#custom-submit:focus {
     font-weight: 400;
     font-family: FontAwesome;
     position: absolute;
-        margin-left: -34px;
+        margin-left: -28px;
   }
-.show{
-	display: block !important;
-}
+
 	}
 
 	} 
 
-	*/
+	
 .view-notifications-pharmacie{
 	.view-header{
 		display: none;

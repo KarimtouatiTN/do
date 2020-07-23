@@ -184,30 +184,15 @@ jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
 }
 
 
-/*
+
 if ($('header').length>0){
-
-  $("#block-views-block-notifications-pharmacie-block-1 button").click(function(){
-$(".btn-hide").show();
-$("#block-views-block-notifications-pharmacie-block-1 button").addClass("btn-click")
-    // $('.btn-hide').addClass('show');
-  });
+//alert("zzzz")
+  $("#shown-button-notif:contains('0')").css('background','white');  
+ 
+  
 
 
-  $("#block-views-block-notifications-pharmacie-block-1 button.btn-click").click(function(){
-$(".btn-click").removeClass();
-$(".btn-hide").hide();
-
-
-
-
-  });
-
-  $('#block-views-block-notifications-pharmacie-block-1 .content').prepend($('#custom-submit'));
-    $("#custom-submit:contains('0')").css('background','white');             
 }
-
-*/
     }
   };
 
