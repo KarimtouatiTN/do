@@ -1,5 +1,8 @@
 (function ($) {
 
+  jQuery(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+  });
 
   if (jQuery(".block-pharmacie-edit-block").length > 0) {
     jQuery(".block-formblock-node").wrap('<div id="envoi-mdo" class="tab-pane custom-tab-pane show fade in active"></div>');
@@ -7,6 +10,10 @@
     jQuery('.custom-tab-pane').wrapAll('<div class="tab-content"></div>>');
   }
   if (jQuery('.block-views-blocknotifications-pharmacie-block-1').length > 0) {
+    $(".views-field.views-field-field-etat span:contains('En attente')").addClass('badge-primary');
+    $(".views-field.views-field-field-etat span:contains('Repris')").addClass('badge-success');
+    $(".views-field.views-field-field-etat span:contains('Annulé')").addClass('badge-danger');
+
     jQuery('#dropdownMenuLink').hide()
     jQuery('.ajax-progress-throbber').remove()
     jQuery('.ajax-progress-fullscreen').remove()
@@ -41,6 +48,12 @@
   Drupal.behaviors.pharmacie = {
     attach: function () {
       if (jQuery('.block-views-blocknotifications-pharmacie-block-1').length > 0) {
+
+        $(".views-field.views-field-field-etat span:contains('En attente')").addClass('badge-primary');
+        $(".views-field.views-field-field-etat span:contains('Repris')").addClass('badge-success');
+        $(".views-field.views-field-field-etat span:contains('Annulé')").addClass('badge-danger');
+
+
         jQuery('.ajax-progress-throbber').remove()
         jQuery('.ajax-progress-fullscreen').remove()
 
