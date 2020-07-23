@@ -8,7 +8,7 @@
     // jQuery(".block-formblock-node").wrap('<div id="envoi-mdo" class="tab-pane custom-tab-pane show fade in active"></div>');
     jQuery(".block-pharmacie-edit-block").wrap('<div id="profile-form" class="tab-pane custom-tab-pane fade show active"></div>');
     jQuery(".historique-pharmacie").parent().parent().parent().wrap('<div id="history-pharma" class="tab-pane custom-tab-pane fade"></div>');
-    // jQuery(".securite-pharma").parent().parent().parent().wrap('<div id="security-pharma" class="tab-pane custom-tab-pane fade"></div>');
+    jQuery(".block-user-edit-form-block").wrap('<div id="security-pharma" class="tab-pane custom-tab-pane fade"></div>');
     jQuery('.custom-tab-pane').wrapAll('<div class="tab-content"></div>>');
   }
   // if (jQuery('.block-views-blocknotifications-pharmacie-block-1').length > 0) {
