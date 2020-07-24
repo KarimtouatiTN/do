@@ -139,39 +139,52 @@
   font-weight: 400;
   font-family: FontAwesome; }
 
-#block-notifpharmaciebutton {
-  margin-right: 34px; }
-  #block-notifpharmaciebutton .content .view-notifications-pharmacie {
-    background: #f7f7f7;
+/*
+#block-notifpharmaciebutton{
+	    margin-right: 34px;
+	.content{
+		
+		.view-notifications-pharmacie{
+    
+        background: #f7f7f7;
     border-radius: 3px;
     position: fixed;
     width: 208px;
-    margin-top: 26px;
+   
+      margin-top: 26px;
     margin-left: -170px;
     border: 1px solid #4ccfe0;
     padding: 0px 1px 5px 2px;
-    text-align: left; }
-    #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content {
-      margin-left: 0px; }
-      #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list {
-        width: 200px; }
-        #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list li {
-          border-bottom: 1px solid #bdbdbd; }
-        #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list li:last-child {
-          border: none !important; }
-        #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list a:hover, #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list a:active, #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list li:hover, #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list li:active {
-          color: #fff;
-          background: #4ccfe0; }
-      #block-notifpharmaciebutton .content .view-notifications-pharmacie .view-content .item-list:before {
-        content: "Notification";
-        color: #235196;
-        background: white;
-        width: 100%;
-        display: block;
-        padding-left: 19px;
-        padding-top: 10px; }
-  #block-notifpharmaciebutton .content .view-notifications-pharmacie:before {
-    content: '';
+    text-align: left;
+    .view-content{
+    	margin-left: 0px;
+    	.item-list{
+    		width: 200px;
+    		li{ border-bottom: 1px solid #bdbdbd;}
+           
+               li:last-child{
+            	border:none !important;
+            }
+            a:hover,a:active,li:hover,li:active{
+            	color: #fff;
+     		  background: #4ccfe0;
+            }
+    		
+    	}
+    .item-list:before {
+    content: "Notification";
+    color: #235196;
+    background: white;
+    width: 100%;
+    display: block;
+    padding-left: 19px;
+        padding-top: 10px;
+}
+    }
+
+	    }
+	     .view-notifications-pharmacie:before{
+	  content: '';
     display: block;
     width: 0;
     width: 0;
@@ -182,16 +195,25 @@
     border-color: transparent transparent #4ccfe0 transparent;
     height: 0;
     position: absolute;
+
     border-bottom: -2px solid transparent;
+
     left: 156px;
-    top: -18px; }
-  #block-notifpharmaciebutton .content #shown-button-notif {
+    top: -18px;
+		}
+
+
+		
+
+
+	 #shown-button-notif{
+
     border: none;
     color: #080808;
     height: 19px;
     font-size: 12px;
     width: 13px;
-    cursor: pointer;
+    cursor:pointer;
     background: red;
     border-radius: 4px;
     text-align: center;
@@ -199,28 +221,180 @@
     padding: 0;
     color: #fff;
     font-weight: bold;
-    position: relative; }
-  #block-notifpharmaciebutton .content #shown-button-notif:focus {
+    position: relative;
+
+  }
+
+#shown-button-notif:focus {
     border: none;
-    box-shadow: none; }
-  #block-notifpharmaciebutton .content #shown-button-notif::after {
-    content: inherit; }
-  #block-notifpharmaciebutton .content #shown-button-notif::before {
-    content: "\f0f3";
-    font-size: 25px;
+    box-shadow: none;
+}
+
+#shown-button-notif::after{
+ content: inherit;	
+ }
+
+   #shown-button-notif::before{
+  	content:"\f0f3";
+  	font-size: 25px;
     padding: 3px 10px;
-    color: #235196;
+   color: #235196;
     font-weight: 400;
     font-family: FontAwesome;
     position: absolute;
-    margin-left: -28px; }
+        margin-left: -28px;
+  }
 
-.view-notifications-pharmacie .view-header {
+	}
+
+	} 
+
+	
+.view-notifications-pharmacie{
+	.view-header{
+		display: none;
+	}
+}
+.ajax-progress{
+	display: none;
+}
+*/
+/******-----fom login ------******/
+.login-form-connect .dropdown {
+  padding: 0;
+  overflow: hidden;
+  top: 51px;
+  padding: 0; }
+  .login-form-connect .dropdown:before {
+    content: "Bienvenue";
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #235196;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center; }
+.login-form-connect #drop-down-login-wrapper .login.button {
+  display: -ms-flexbox;
+  display: flex;
+  color: #235196;
+  margin-right: 33px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0px; }
+  .login-form-connect #drop-down-login-wrapper .login.button:before {
+    content: "\f2bd";
+    color: #1d71b8;
+    font-family: 'fontawesome';
+    font-size: 22px;
+    padding-right: 5px; }
+.login-form-connect #drop-down-login-wrapper .login.button:hover {
+  color: #44bac9; }
+.login-form-connect #drop-down-login-wrapper .login.button:hover::before {
+  color: #44bac9; }
+.login-form-connect #user-login-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 10px 20px; }
+  .login-form-connect #user-login-form label {
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-left: 74px;
+    padding-top: 11px;
+    color: #235196;
+    font-size: 14px; }
+    .login-form-connect #user-login-form label::after {
+      content: "*" !important;
+      color: red !important;
+      background: none;
+      width: inherit !important;
+      height: inherit !important;
+      margin: 0 0.3em !important;
+      font-weight: bold !important; }
+  .login-form-connect #user-login-form input {
+    min-width: 229px;
+    padding: 15px 13px;
+    font-size: 14px;
+    height: 34px;
+    border: none;
+    margin-bottom: 8px;
+    margin-left: 59px;
+    margin-top: -4px;
+    background: none;
+    border-bottom: 1px solid #c1c4cf;
+    border-radius: 0; }
+  .login-form-connect #user-login-form input:focus {
+    border-bottom: 1px solid #4ccfe0;
+    background: none;
+    box-shadow: none; }
+  .login-form-connect #user-login-form div[id*='edit-actions'] {
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 42px 0 10px 0px; }
+  .login-form-connect #user-login-form button {
+    min-width: 312px;
+    border: 1px solid #c1c4cf;
+    padding: 11px 22px;
+    font-size: 16px;
+    height: auto;
+    /* text-transform: inherit; */
+    color: #fff;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    margin: 0;
+    background: none;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; }
+    .login-form-connect #user-login-form button:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #235196;
+      z-index: -2; }
+    .login-form-connect #user-login-form button:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #4ccfe0;
+      transition: all .3s;
+      z-index: -1; }
+    .login-form-connect #user-login-form button:hover {
+      color: #fff; }
+      .login-form-connect #user-login-form button:hover:before {
+        width: 100%; }
+  .login-form-connect #user-login-form fieldset {
+    width: 312px;
+    border: 1px solid #c1c4cf;
+    border-radius: 4px; }
+    .login-form-connect #user-login-form fieldset i {
+      font-size: 26px;
+      color: #235196;
+      padding-left: 31px;
+      position: absolute; }
+  .login-form-connect #user-login-form .js-form-item-pass {
+    border-radius: 0px 0px 4px 4px; }
+  .login-form-connect #user-login-form .js-form-item-name {
+    border-bottom: none;
+    border-radius: 4px 4px 0px 0px; }
+.login-form-connect .list-group-item {
   display: none; }
 
-.ajax-progress {
-  display: none; }
-
+/******-----fom login ------******/
 .map-tn-pharmacie .taille-map {
   float: left;
   width: 54%; }

@@ -29,18 +29,19 @@ else{
 
 if ($('header').length>0){
 
-  $("#block-views-block-notifications-pharmacie-block-1 button").click(function(){
-    alert('ooso');
-    $(".view-notifications-pharmacie").slideToggle("slow");
-  });
+$(".login.button span").html('SE CONNECTER');
+  $("<i class='fa fa-envelope-o'></i></i>").insertBefore($('.drop-down-login-container .js-form-item-name input'));
+   $("<i class='fa fa-lock'></i>").insertBefore($('.drop-down-login-container .js-form-item-pass input'))
+    
+ 
+  }
 
-  //alert('iiolomo');
-  $('#block-views-block-notifications-pharmacie-block-1 .content').prepend($('#custom-submit'))
+
 
      
 
 
-}
+
 
 
 
