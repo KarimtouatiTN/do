@@ -1,0 +1,15 @@
+commande.accept:
+  path: '/action/accepter-commande/{nid}'
+  defaults:
+    _controller: '\Drupal\ph_commande\Controller\CommandeController::accept'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+commande.refuse:
+  path: '/action/refuser-commande/{nid}'
+  defaults:
+    _controller: '\Drupal\ph_commande\Controller\CommandeController::refuse'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
