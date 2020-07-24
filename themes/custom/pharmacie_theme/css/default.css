@@ -264,7 +264,8 @@
   padding: 0;
   overflow: hidden;
   top: 51px;
-  padding: 0; }
+  padding: 0;
+  top: 37px !important; }
   .login-form-connect .dropdown:before {
     content: "Bienvenue";
     text-align: center;
@@ -285,16 +286,21 @@
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
-  padding: 0px; }
+  padding: 0px;
+  border: 1px solid #2351a1;
+  padding: 10px 5px;
+  border-radius: 6px;
+  height: 35px; }
   .login-form-connect #drop-down-login-wrapper .login.button:before {
     content: "\f2bd";
     color: #1d71b8;
     font-family: 'fontawesome';
     font-size: 22px;
     padding-right: 5px; }
-.login-form-connect #drop-down-login-wrapper .login.button:hover {
-  color: #44bac9; }
-.login-form-connect #drop-down-login-wrapper .login.button:hover::before {
+.login-form-connect #drop-down-login-wrapper .login.button:hover, .login-form-connect #drop-down-login-wrapper .login.button:active {
+  color: #44bac9;
+  border: 1px solid #44bac9; }
+.login-form-connect #drop-down-login-wrapper .login.button:hover::before, .login-form-connect #drop-down-login-wrapper .login.button:active::before {
   color: #44bac9; }
 .login-form-connect #user-login-form {
   display: -ms-flexbox;

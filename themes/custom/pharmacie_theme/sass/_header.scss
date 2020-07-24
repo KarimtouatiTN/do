@@ -299,6 +299,7 @@ $light-black: rgba(0,0,0,.1);
 	padding: 0;
     overflow: hidden;
     top: 51px;padding: 0;
+     top: 37px !important;
     &:before{
     content: "Bienvenue";
     text-align: center;
@@ -323,6 +324,10 @@ $light-black: rgba(0,0,0,.1);
     font-size: 16px;
     font-weight: 500;
     padding: 0px;
+    border: 1px solid #2351a1;
+    padding: 10px 5px;
+    border-radius: 6px;
+     height: 35px;
     &:before{
     	content: "\f2bd";
     color: #1d71b8;
@@ -334,12 +339,14 @@ $light-black: rgba(0,0,0,.1);
     }
 		}
 
-  .login.button:hover{
+  .login.button:hover,.login.button:active{
 
     color: #44bac9;
+    border: 1px solid #44bac9;
     }
-    .login.button:hover::before{
+    .login.button:hover::before,.login.button:active::before{
     	    color: #44bac9;
+
 
     }
 	}
