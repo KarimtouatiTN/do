@@ -3,10 +3,10 @@
  * Global utilities.
  *
  */
- 
- 
- 
- 
+
+
+
+
  (function ($) {
 /*
   if ($('body').length>0){
@@ -18,11 +18,11 @@ if (!$('body').hasClass("user-logged-in")){
 
 }
 else{
- 
+
   $('.bg-primary').addClass('menu-nav-ht');
 }
 }
-	*/ 
+	*/
 
 
 
@@ -38,7 +38,7 @@ $(".login.button span").html('SE CONNECTER');
 
 
 
-     
+
 
 
 
@@ -57,7 +57,7 @@ if ($('.path-frontpage').length>0){
 
 setTimeout( function() {
   panel2.classList.add('open');
-  
+
   setTimeout( function() {
     panel2.classList.remove('open');
   }, 1500);
@@ -139,7 +139,7 @@ if ($('.path-commander').length>0){
 
 
  // alert('ookiik');
-  
+
 
 
  $(document).on('click', '.on ', function () {
@@ -160,8 +160,8 @@ if ($('.path-commander').length>0){
 }
 
 
-	 
-	 
+
+
 	 })(jQuery);
 
 (function ($, Drupal) {
@@ -188,9 +188,10 @@ jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
 
 if ($('header').length>0){
 //alert("zzzz")
-  $("#shown-button-notif:contains('0')").css('background','white');  
- 
-  
+  $("#shown-button-notif").css('background','red');
+  $("#shown-button-notif:contains('0')").css('background','white');
+
+
 
 
 }
