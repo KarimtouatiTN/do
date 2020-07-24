@@ -329,6 +329,11 @@
     background: none;
     border-bottom: 1px solid #c1c4cf;
     border-radius: 0; }
+  .login-form-connect #user-login-form input:-webkit-autofill {
+    background-color: #fff !important;
+    background-image: #fff !important;
+    color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important; }
   .login-form-connect #user-login-form input:focus {
     border-bottom: 1px solid #4ccfe0;
     background: none;
