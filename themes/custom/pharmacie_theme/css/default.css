@@ -1834,7 +1834,8 @@ h2 {
     .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus {
       width: 90%;
       margin: 0 auto;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-bottom: 200px; }
       .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table {
         background: #fbfafa;
         border: 2px solid #4ccfe0; }
