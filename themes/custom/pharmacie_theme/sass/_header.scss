@@ -107,6 +107,8 @@ $light-black: rgba(0,0,0,.1);
       }
      .img-profile{
        img{
+
+    background: #fff;
     height: 50px;
     width: 50px;
     border: 0.5px solid #4ccfe0;
@@ -124,7 +126,7 @@ $light-black: rgba(0,0,0,.1);
     text-decoration: none;
     background-color: #4ccfe0;
      	}
-     	a:hover{
+     	a:hover,a:hover:before{
      		color: #fff;
      		background: #4ccfe0;
      	}
@@ -461,7 +463,7 @@ $light-black: rgba(0,0,0,.1);
    fieldset{
    	    width: 312px;
            border: 1px solid #c1c4cf;
-   //background: #eef1f4;
+
     border-radius: 4px;
 
     i{

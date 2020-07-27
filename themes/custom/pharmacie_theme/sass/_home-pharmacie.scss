@@ -10,6 +10,8 @@ $animate: all 0.2s ease-in-out;
         stroke-width: 1px;
         transition: fill .3s;
         transition: all ease-in 0.5s;
+        transition: all 1s;
+        transform-origin: 50% 50%;
       }
       .bg-hover-map{
         .land{          
@@ -18,11 +20,19 @@ $animate: all 0.2s ease-in-out;
       }
     }
   }
-
+.tn-zoom:hover{
+  transform:scale(1) !important;
+}
 .land:hover{
       fill: #4ccfe0;
-      stroke: #4ccfe0;
+      stroke: #4ccfe0;   
+      transform: scale(1.051);
  } 
+
+
+
+
+  
 
 .region-map-tun{
   display: inherit;
@@ -74,7 +84,7 @@ $animate: all 0.2s ease-in-out;
     -ms-transform: rotate(47deg);
     -o-transform: rotate(47deg);
     transform: rotate(47deg);
-*/
+
 
         content: "";
     display: flex;
@@ -86,20 +96,119 @@ $animate: all 0.2s ease-in-out;
     background-color: #fff;
     margin: 5px 10px 3px -7px;
     padding: 2px;
+    */
 
   }
   a{
     width: 100%;
+     color: #fff;
+
+    font-size: 17px;
+    font-weight: bold;
+
   }
   a:hover{
    //background: #235196;
    text-decoration: none;
+   color: #fff;
   }
  }
+
+
+.sm-link{
+  --uismLinkDisplay: var(--smLinkDisplay, inline-flex); 
+  --uismLinkTextColor: var(--smLinkTextColor);
+  --uismLinkTextColorHover: var(--smLinkTextColorHover);  
+  
+  display: var(--uismLinkDisplay);
+  color: var(--uismLinkTextColor);
+  position: relative;
+  overflow: hidden;
+}
+
+a.sm-link{
+  text-decoration: none;
+}
+
+.sm-link__label{
+  display: block;
 }
 
 
 
+/* sm-link_padding-bottom */ 
+
+.sm-link_padding-bottom{
+  --uismLinkLineWeight: var(--smLinkLineWeight, 4px);
+  --uismLinkLineColor: var(--smLinkLineColor, #FFF);  
+  
+  padding-bottom: var(--uismLinkLineWeight);  
+  position: relative;
+}
+
+.sm-link_padding-bottom::after{
+  content: "";
+  width: 100%;
+  height: var(--uismLinkLineWeight);
+  background-color: var(--uismLinkLineColor);
+  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+
+
+.sm-link_bg:hover{
+  color: var(--uismLinkTextColorHover);
+}
+
+/* sm-link_text */ 
+
+.sm-link_text::before{
+  content: attr(data-sm-link-text);
+  color: var(--uismLinkTextColorHover);
+  position: absolute;
+}
+
+.sm-link_text::before, 
+.sm-link_text .sm-link__label{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.86, .6, .08, 1.01); 
+  transition-duration: .3s;
+}
+
+.sm-link_text:hover::before,
+.sm-link_text:hover .sm-link__label{
+  transition-duration: .4s;
+}
+
+
+
+/* effect 4 */
+
+.sm-link4::after{
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: transform .3s ease-out, opacity .3s ease-out;
+}
+
+.sm-link4:hover::after{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+
+
+
+
+}
+
+
+/*
 li{
     display: flex;
     flex-flow: row nowrap;
@@ -156,7 +265,7 @@ li{
       }
     }
   }
-
+*/
 }
 
 
@@ -306,18 +415,73 @@ p + p {
 
 .contact-message-contact-form{
   //width:50%;
-   // background-image: url(/themes/custom/pharmacie_theme/images/img-01.png);
-    //background-position: right 10% bottom 45%;
-    //background-repeat: no-repeat;
+   background-image: url(/themes/custom/pharmacie_theme/images/nous-contactez.png);
+    background-position: right 10% bottom 45%;
+    background-repeat: no-repeat;
     .content{
       display: -ms-flexbox;
           display: flex;
-    justify-content: center;
+    //justify-content: center;
     }
     #edit-actions{
       display: -ms-flexbox;
       display: flex;
     justify-content: center;
+    button{
+
+border: 2px solid #235196;
+    padding: 6px 22px;
+    border-radius: 5px;
+    font-size: 15px;
+    height: auto;
+    text-transform: inherit;
+     color: #235196;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    margin: 0;
+    background: none;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before{
+          content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #4ccfe0;
+    transition: all .3s;
+    z-index: -1;
+    }
+    &:after{
+     content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #235196;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -2;
+    }
+     &:hover {
+        color: #fff;
+            border: 2px solid #4ccfe0;
+        text-decoration: none;
+        &:before {
+            width: 100%;
+        }
+    }
+
+
+
+
+
+    }
     }
   fieldset{
     label{
@@ -455,15 +619,56 @@ svg{
     font-size: 19px;
     }
     a{
+     border: 2px solid #235196;
+    padding: 6px 22px;
+    border-radius: 5px;
+        margin-top: 64px !important;
+    font-size: 17px;
+    height: auto;
+    text-transform: inherit;
+     color: #235196;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    margin: 0;
+    background: none;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 
-    background: #ffffff;
-    color: #4ccfe0;
-    border: 1px solid #235196;
-    /* border-radius: 50px; */
-    border: 3px solid #4ccfe0;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 39px 0;
+    &:before{
+          content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #4ccfe0;
+    transition: all .3s;
+    z-index: -1;
+    }
+    &:after{
+     content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #235196;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -2;
+    }
+     &:hover {
+        color: #fff;
+            border: 2px solid #4ccfe0;
+        text-decoration: none;
+        &:before {
+            width: 100%;
+        }
+    }
+
+
     }
     
     }
@@ -472,9 +677,9 @@ svg{
       border: none
     }
     .txt-info{
-        padding: 105px 0px 123px 108px;
-      background-image: url(/themes/custom/pharmacie_theme/images/bg-info-txt.png);
-    background-position: right -5% bottom 45%;
+          padding: 10% 0px 155px 12%;
+    background-image: url(/themes/custom/pharmacie_theme/images/bg-info-txt.png);
+    background-position: right 10% bottom 45%;
     background-repeat: no-repeat;
     }
 
@@ -486,7 +691,208 @@ svg{
       background: #E7EDF4;
       img{
         //width: 82%;
-        margin-top: 101px;
+        //margin-top: 101px;
       }
     }
   }
+
+
+  /************Services**************/
+
+.bloc-serivices{
+      margin: 0 auto;
+.card-services{
+
+    padding: 100px 0;
+  .card{
+
+      min-height: 400px;
+      background: #fff;
+      box-shadow: 0 20px 50px rgba(0,0,0,.1);
+      border-radius: 10px;
+      transition: 0.5s;
+      .box{
+            text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    img{
+      width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+      }
+      h2{
+        font-size: 20px;
+    color: #262626;
+    padding: 28px 0!important;
+    span{font-size: 14px;
+    background: #235196;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+      }
+    }
+    p{color: #262626;}
+    }
+    .envoyer-dmd{
+     border: 2px solid #235196;
+    padding: 6px 22px;
+    border-radius: 5px;
+    font-size: 15px;
+    height: auto;
+    text-transform: inherit;
+     color: #235196;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    margin: 0;
+    background: none;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before{
+          content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #4ccfe0;
+    transition: all .3s;
+    z-index: -1;
+    }
+    &:after{
+     content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #235196;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -2;
+    }
+     &:hover {
+        color: #fff;
+            border: 2px solid #4ccfe0;
+        text-decoration: none;
+        &:before {
+            width: 100%;
+        }
+    }
+    }
+  }
+  .card:hover{
+      transform: scale(1.1);
+    }
+}
+}
+/************Services**************/
+/* BTN SIX */
+
+
+
+  /************Services**************/
+
+.img-phar{
+   //width:600px;
+  margin: 0 auto;
+      height: 86vh;
+    overflow: hidden;
+}
+#slider {
+  //width: 600px;
+  height: 600px;
+  overflow: hidden;
+ // margin: 30px auto;
+ margin-top: 70px;
+}
+
+#slider > img {
+  //width: 600px;
+  height: 600px;
+  float: left;
+  display: none;
+}
+.arrow{
+      overflow: hidden;
+    position: absolute;
+ width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //justify-content: center;
+a {
+    font-size: 0 !important;
+    background: none !important;
+    border: none !important;
+    &:hover{
+      text-decoration:none;
+  }
+}
+    a:first-child:before,a:last-child:before{
+   content:"\f053";
+    color: #1d71b8;
+    font-family: 'fontawesome';
+    font-size: 41px;
+    padding-right: 5px;
+    }
+    a:last-child:before{
+      content:"\f054";
+    }
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+  top: 47%;
+}
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 2px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}

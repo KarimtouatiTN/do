@@ -5,6 +5,78 @@
  */
 
 
+sliderInt=1;
+sliderNext=2;
+
+function startSlider() {
+  count = jQuery("#slider > img").length;
+  
+  //run function every 3 secs
+  loop = setInterval(function() {
+    
+    if(sliderNext > count)
+    {
+      sliderNext = 1;
+      sliderInt = 1;
+    }
+    
+    jQuery("#slider > img").fadeOut(300);
+    jQuery("#slider > img#" + sliderNext).fadeIn(300);
+    
+    sliderInt = sliderNext;
+    sliderNext++;
+    
+  }, 3000);
+}
+
+function prev() {
+  newSlide = sliderInt -1;
+  showSlide(newSlide);
+}
+
+function next() {
+  newSlide = sliderInt +1;
+  showSlide(newSlide);
+}
+
+function showSlide(id) {
+  stopLoop();
+  if(id > count)
+    {
+      id = 1;
+    }
+  else if(id < 1)
+    {
+      id = count;
+    }
+    
+    jQuery("#slider > img").fadeOut(300);
+    jQuery("#slider > img#" + id).fadeIn(300);
+    
+    sliderInt = id;
+    sliderNext = id + 1;
+  startSlider();
+}
+
+function stopLoop() {
+  //stop the loop you created in setInterval
+  window.clearInterval(loop);
+}
+
+jQuery("#slider > img").hover(
+  function() {
+    stopLoop();
+  },
+  function() {
+    startSlider();
+  }
+  );
+
+
+
+
+
+
 
 
 
@@ -26,7 +98,11 @@ else{
 	*/
 
 
-
+jQuery(document).ready(function() {
+  //alert("pzzzzppmo");
+  jQuery("#slider > img#1").fadeIn(300);
+  startSlider();
+})
 
 
 
@@ -42,67 +118,63 @@ $(".login.button span").html('SE CONNECTER');
 
 
 
+jQuery('a[href^="#block-maptunsie"]').on('click', function (event) {
+        var target = jQuery(this.getAttribute('href'));
+        if (target.length) {
+
+          event.preventDefault();
+          jQuery('html, body').animate({
+            scrollTop: target.offset().top - 60
+          }, 1000);
+        }
+      });
 
 
 
 
 
+if ($('.path-mon-profil').length>0){
 
+jQuery(".layout-main-wrapper #main").removeClass("container");
+
+$('input').focus(
+    function(){
+       $(this).parent().addClass("border-field");
+        
+    }).blur(
+    function(){
+          $(this).parent().removeClass("border-field");
+    });
+
+
+
+$('select').change(
+    function(){
+       $(this).parent().addClass("border-field");
+        
+    }).blur(
+    function(){
+          $(this).parent().removeClass("border-field");
+    });
+
+
+$('textarea').focus(
+    function(){
+       $(this).parent().parent().addClass("border-field");
+        
+    }).blur(
+    function(){
+          $(this).parent().parent().removeClass("border-field");
+    });
+
+}
 
 
 if ($('.path-frontpage').length>0){
-
-//$('.block-views-blockcustomer-view-block-1').append($('.compteur-front'));
-
-
-
-
-  let panel2 = document.querySelector('.panel:nth-child(2)');
-
-setTimeout( function() {
-  panel2.classList.add('open');
-
-  setTimeout( function() {
-    panel2.classList.remove('open');
-  }, 1500);
-}, 500);
-
-/*$('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
-    });
-});
-*/
-
-
-$(".btn_container").click(function(){
-  $(".over_lay").css({
-    width: "100%"
-  });
-  $(".list_items_container").css({
-    left: "0px"
-  });
-});
-$(".over_lay, .close_btn").click(function(){
-  $(".over_lay").css({
-    width: "0px"
-  });
-  $(".list_items_container").css({
-    left: "-300px"
-  });
-});
-
-jQuery(".field--name-field-nom input").attr("placeholder", "Nom");
-
-jQuery(".field--name-field-email input").attr("placeholder", "E-mail");
-jQuery(".field--name-field-telephone input").attr("placeholder", "Téléphone");
-jQuery(".field--name-field-message textarea").attr("placeholder", "Message");
+jQuery("#contact-message-contact-form .field--name-field-nom input").attr("placeholder", "Nom");
+jQuery("#contact-message-contact-form .field--name-field-email input").attr("placeholder", "E-mail");
+jQuery("#contact-message-contact-form .field--name-field-telephone input").attr("placeholder", "Téléphone");
+jQuery("#contact-message-contact-form .field--name-field-message textarea").attr("placeholder", "Message");
 
 
 $( "#id-tunis" ).hover(
@@ -136,7 +208,7 @@ if ($('.path-commander').length>0){
 
 
 
- $('<div class="toggle-boolean"><label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"><span class="on">Urgente</span><span class="off">Normal</span><!--END--></div></label></div>').insertBefore('.field--name-field-grossiste')
+ $('<div class="toggle-boolean"><label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"><span class="on">Urgente</span><span class="off">Normal</span><!--END--></div></label></div>').insertBefore('.field--name-field-etat-commande')
  //alert('fdfd')
 
 
@@ -175,7 +247,6 @@ if ($('.path-commander').length>0){
   Drupal.behaviors.pharmacie_theme = {
     attach: function (context, settings) {
       if ($('.path-commander').length>0){
-
       jQuery(".field--name-field-medicament input").attr("placeholder", "Médicament");
 jQuery(".field--name-field-quantite input").attr("placeholder", "Quantité");
 jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
@@ -184,6 +255,11 @@ jQuery(".field--name-field-grossiste input").attr("placeholder", "Grossiste");
     $('.field-add-more-submit').text('Ajouter');
          $('<div class="thead-med"><div>Mécicament</div><div>Quantitié</div></div>').insertAfter('table thead tr:nth-child(1)');
 
+
+}
+
+if ($("#contact-message-newsletter-form").length>0){
+jQuery(".field--name-field-email input").attr("placeholder", "Entrez votre email");
 
 
 }
@@ -194,11 +270,26 @@ if ($('header').length>0){
 //alert("zzzz")
   $("#shown-button-notif").css('background','red');
   $("#shown-button-notif:contains('0')").css('background','white');
+}
 
 
+
+if ($('.path-mon-profil').length>0){
+
+
+$('select').change(
+    function(){
+       $(this).parent().addClass("border-field");
+        
+    }).blur(
+    function(){
+          $(this).parent().removeClass("border-field");
+    });
 
 
 }
+
+
     }
   };
 

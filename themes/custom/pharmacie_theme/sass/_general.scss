@@ -109,6 +109,7 @@
         color: #235196;
        font-weight: 400;
        font-family: FontAwesome;
+
 }
 
 .social-media{
@@ -423,7 +424,7 @@ display: none;
 }
 }
 
-.thead-med:nth-child(3){
+.thead-med:not(:last-child){
 	display: none;
 }
 .thead-med{
@@ -467,6 +468,10 @@ display: none;
 	}
 }
 
+select{
+      margin-left: 30px;
+    width: 30%;
+}
 .switch {
   position: relative;
   display: inline-block;
@@ -639,6 +644,450 @@ input:focus ~ .focus-border i:after{transition-delay: 0.4s;}
 
 .adminimal-admin-toolbar{
   .navbar.fixed-top{
-    display: none
+   // margin-top: 70px;
+    position: inherit;
+  }
+  .bg-primary {
+    margin-top: 0px; 
+}
+}
+
+#breadcrumbs{
+  display: none;
+.breadcrumb{
+
+  background: #fff;
+}
+}
+.path-mon-profil{
+  .layout-main-wrapper{
+    #main{
+      overflow: hidden;
+      .layout__region.layout__region--first{
+            background: #434a54;
+           // height: 100vh;
+           .nav.nav-pills{
+              a{
+               color: #fff;
+                font-size: 17px;
+                font-weight: 500;
+            
+              border-radius: 0;
+            }
+            a:hover, a:hover:before{
+             color: #4ccfe0 !important;
+          
+           
+              color: #4ccfe0;
+             
+            }
+               a.active:hover, a.active:hover:before{
+             color: #fff !important;
+          
+           
+              color: #fff;
+             
+            }
+              li:nth-child(1) a::before, li:nth-child(2) a::before,
+               li:nth-child(3) a::before
+               {
+                
+                 content:"\f2bb";
+                    font-size: 24px;
+                    padding: 3px 10px;
+                    color: #fff;
+                    font-weight: 400;
+                    font-family: FontAwesome;
+              }
+               li:nth-child(2) a::before{
+               content:"\f1da";
+
+          
+              }
+                li:nth-child(3) a::before{
+                content:"\f023";
+
+          
+              }
+
+            
+            a.active{
+               background-color: #4ccfe0;
+                   border-radius: 0;
+                 border-left: 6px solid #ffffff;
+                 color: #fff;
+            }
+          }
+          .header-menu-connexion.view-display-id-block_2{
+            .views-row{
+                  width: 100%;
+                  .connecte-menu{
+
+                         padding: 14px 10% 80px;
+                    width: 100%;
+                  display: block;
+                  .field-nom,.field-prenom{
+                    color: #fff;
+                       font-size: 17px;
+                  }
+
+              span.field-nom::before {
+                  content: '';
+                  display: inline-block;
+                  width: 11px;
+                  position: absolute;
+                  left: 73px;
+                  height: 11px;
+                  border: 0.5px solid white;
+                  -moz-border-radius: 7.5px;
+                  -webkit-border-radius: 7.5px;
+                  border-radius: 7.5px;
+                  background-color: #42b72a;
+              }
+                  .type-profile{
+              
+                     padding-left: 11%;
+    color: #b9b9b9;
+    font-size: 13px;
+                  }
+                  }
+            }
+          }
+      }
+      .layout__region.layout__region--second{
+           // padding-left: 5%;
+              // height: 100vh;
+               flex: 0 1 70%;
+           .form-group{
+            margin-bottom: 6px;
+           }
+            form{
+              width:60%;
+               margin: 0 auto;
+            }
+            fieldset{
+              border: 1px solid #c1c4cf;
+              border-radius: 4px;
+               width: 100%;
+                   margin-bottom: 8px;
+              input,select,textarea{
+                border: none;
+                margin:0px;
+                padding: 0px;
+                padding: 0px 17px;
+                &:focus{
+                  box-shadow:none;
+                  border: none;
+                 
+               
+
+                }
+              }
+              @keyframes glow {
+    0% {
+    box-shadow: 0 0 5px #4ccfe0;
+    } 
+    100% {
+    box-shadow: 0 0 20px #4ccfe0;
+    }
+}
+
+              label{
+                margin: 0px;
+                padding: 0px 17px;
+                    color: #235196;
+             font-size: 12px;
+              }
+            }
+            .field--name-field-nom{
+              
+              fieldset{
+                width: 50%;
+                float: left;
+                margin-right: 1%;
+              
+            }
+}
+            .field--name-field-prenom{
+               fieldset{
+                width: 49%;
+           
+              
+            }
+          }
+          #edit-field-categorie--wrapper{
+             border: none;
+            legend{
+              font-size: 14px;
+              color: #235196;
+            }
+           
+                #edit-field-categorie{
+                  display: -ms-flexbox;
+                  display: flex;
+                  align-items: center;
+                }
+          }
+
+            .border-field{
+              border: 1px solid #4ccfe0;
+               animation: glow 800ms ease-out infinite alternate;
+                   outline: none;
+            }
+            .custom-select:disabled{
+              background: none;
+            }
+            #edit-actions,div[id*='edit-actions']{
+                  padding-bottom: 100px;
+              display: -ms-flexbox;
+                  display: flex;
+    justify-content: center;
+                button{
+       background: #4ccfe0;
+    border: 1px solid #4ccfe0;
+    width: 160px;
+    font-weight: 500;
+    font-size: 18px;
+            }
+            }
+          
+
+
+
+
+
+
+  #user-form{
+            small,.password-strength,.password-suggestions,.password-confirm-message
+            ,.form-type-language-select,details{              
+              display: none;
+            }
+            .image-widget-data{
+              span{
+                display: none;
+              }
+            }
+            button[id*="remove"]{
+              font-size:0;
+              background: none;
+              border: none;
+              &:before{
+                content: "\f1f8";
+                font-size: 25px;
+                padding: 10px;
+                color: #4ccfe0;
+                font-weight: 400;
+                font-family: FontAwesome;
+              } 
+            }
+            .js-form-type-password-confirm,
+              .js-form-type-managed-file{
+              border: none;
+            }
+          }
+
+.historique-pharmacie{
+         display: flex;
+    justify-content: space-around;
+    /* margin-bottom: 50px; */
+    height: 100vh;
+
+
+
+.card {
+  display: inline-block;
+  position: relative;
+    width: 220px;
+    height: 200px;
+  word-wrap: break-word;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  background-color: #fff;
+  background-clip: border-box;
+  box-shadow: 0 0 2rem 0 white;
+  .link-ht{
+        color: #265498;
+    font-weight: bold;
   }
 }
+
+.card-lift--hover:hover {
+  transition: all 0.15s ease;
+  transform: translateY(-20px);
+  box-shadow: 0 0 2rem 0 #4ccfe0;
+  cursor: pointer;
+}
+
+.cover-bg {
+  background: transparent;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card .card-blockquote {
+  position: relative;
+  padding: 1rem;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.15s ease;
+  border-radius: 10px;
+}
+
+.opacity-7 {
+  opacity: 0.7;
+}
+
+.bg-gradient-default {
+  background: #fff;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.mt-sm {
+  margin-top: 2rem;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+
+
+.icon i,
+.icon svg {
+  font-size: 1.7rem;
+}
+
+.icon-shape {
+      display: block;
+}
+
+.icon-shape i,
+.icon-shape svg {
+  font-size: 3.25rem;
+}
+
+
+
+.icon-color {
+  color: #235196;
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  }
+  
+  
+} 
+
+        .commande-recus{
+            width: 90%;
+          margin: 0 auto;
+          margin: 0 auto;
+          table{
+                background: #fbfafa;
+    border: 2px solid #4ccfe0;
+    .views-field-title{
+          width: 16%;
+              text-align: center;
+                  padding-top: 7px;
+       
+    }
+       .views-field-field-medicaments-commandes{
+            .list-group-item {
+             background-color: transparent !important;
+             border: none !important;
+            }
+          }
+          .views-field-nothing{
+            a,button{
+              background:#4ccfe0;
+                  border: 1px solid #4ccfe0;
+                  color: #fff;
+                  font-weight: 500;
+
+          }
+                 .dropdown-item{
+                       background: #fff;
+    color: #524c4c;
+    font-size: 12px;
+    border: none;          }
+            }
+          tr:nth-child(even) {background-color: #f7f7f7;}
+          }
+          td{    padding: 5px 5px;
+                border-bottom: 1px solid #4ccfe0;
+                .btn-link{
+                  background:#4ccfe0;
+                  border: 1px solid #4ccfe0;
+                  color: #fff;
+                  font-weight: 500;
+                }
+            .field--name-field-medicament{
+                  margin-bottom: 3px;
+            }
+          }
+      }
+
+
+          }
+
+
+    }
+
+
+
+  }
+  .site-footer{
+    margin-top: 0px;
+  }
+}
+

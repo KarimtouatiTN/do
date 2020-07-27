@@ -1,22 +1,69 @@
+@charset "UTF-8";
 /*-----------------------------------------------------------------------------------*/
 /******************************* appels aux fichiers  *******************************/
 /*---------------------------------------------------------------------------------*/
 .site-footer {
   padding: 28px 0;
-  margin-top: 100px; }
+  margin-top: 100px;
+  background: #235196;
+  border-top: 2px solid white; }
   .site-footer #block-copyright, .site-footer .contact-message-newsletter__form {
     border: none; }
   .site-footer .region-footer-second a {
     color: #fff; }
+  .site-footer .region-footer-second a:hover {
+    color: #4ccfe0; }
+  .site-footer .region-footer-second a::before:hover {
+    color: #4ccfe0; }
   .site-footer .copy-right {
     color: #fff; }
-  .site-footer .social-media-links {
-    display: flex;
+  .site-footer .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: capitalize; }
+  .site-footer .para {
+    color: #fff; }
+  .site-footer li {
     list-style: none; }
-    .site-footer .social-media-links a {
-      border: none !important;
-      font-size: 20px;
-      margin-right: 10px; }
+  .site-footer .telephone, .site-footer .mail {
+    color: #fff;
+    font-size: 17px; }
+    .site-footer .telephone:before, .site-footer .mail:before {
+      content: "\f095";
+      color: #ffffff;
+      font-family: 'fontawesome';
+      font-size: 26px;
+      padding-right: 5px; }
+  .site-footer .mail:before {
+    content: "\f0e0"; }
+  .site-footer #block-mainnavigation {
+    display: flex;
+    justify-content: center;
+    padding-top: 51px; }
+    .site-footer #block-mainnavigation a:before {
+      content: "\f054" !important;
+      color: #fff;
+      font-family: 'fontawesome';
+      font-size: 16px;
+      padding-right: 5px; }
+  .site-footer .subscribe-mail h2 {
+    font-size: 25px;
+    color: #fff;
+    border: none;
+    padding-bottom: 30px; }
+  .site-footer .subscribe-mail label {
+    display: none; }
+  .site-footer .subscribe-mail input {
+    border-radius: 0px !important;
+    height: 50px; }
+  .site-footer button[id*="edit-preview"] {
+    display: none; }
+  .site-footer button {
+    height: 50px;
+    background: #4ccfe0;
+    border: 2px solid #4CCfe0;
+    border-radius: 0px; }
 
 #page {
   min-height: 100vh;
@@ -94,6 +141,7 @@
   border-radius: 5px;
   width: 315px; }
 .header-menu-connexion .template-user-menu .img-profile img {
+  background: #fff;
   height: 50px;
   width: 50px;
   border: 0.5px solid #4ccfe0;
@@ -105,7 +153,7 @@
   color: #fff;
   text-decoration: none;
   background-color: #4ccfe0; }
-.header-menu-connexion .template-user-menu .dropdown-menu a:hover {
+.header-menu-connexion .template-user-menu .dropdown-menu a:hover, .header-menu-connexion .template-user-menu .dropdown-menu a:hover:before {
   color: #fff;
   background: #4ccfe0; }
 .header-menu-connexion .template-user-menu .dropdown-menu a {
@@ -414,14 +462,20 @@
   stroke: #4CCFE0;
   stroke-width: 1px;
   transition: fill .3s;
-  transition: all ease-in 0.5s; }
+  transition: all ease-in 0.5s;
+  transition: all 1s;
+  transform-origin: 50% 50%; }
 .map-tn-pharmacie .bg-hover-map .land {
   fill: #4ccfe0;
   stroke: #4ccfe0; }
 
+.tn-zoom:hover {
+  transform: scale(1) !important; }
+
 .land:hover {
   fill: #4ccfe0;
-  stroke: #4ccfe0; }
+  stroke: #4ccfe0;
+  transform: scale(1.051); }
 
 .region-map-tun {
   display: inherit; }
@@ -437,16 +491,78 @@
   display: -ms-flexbox;
   display: flex;
   padding: 30px 0;
-  width: 46%; }
-  .list-region .list-region-1 ul li {
-    list-style: none;
-    display: -ms-flex;
-    display: flex;
-    color: #fff;
-    align-items: center;
-    padding: 7px 0px;
-    margin: 17px 0; }
-  .list-region .list-region-1 ul li:before {
+  width: 46%;
+  /*
+  li{
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin: 0 0 45px;
+           color: #ffffff;
+      .hover {
+        margin: 0 auto;
+        padding: 0;
+        transition: $animate;
+        position: relative;
+           color: #ffffff;
+         font-weight: bold;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          width: 0px;
+          height: 5px;
+          margin: 5px 0 0;
+          transition: $animate;
+          transition-duration: 0.75s;
+          opacity: 0;
+          background-color: #fff;
+        }
+      
+     
+        &.dsg {
+          &:before {
+            left: 30%;
+          }
+          &:after {
+            right: 30%;
+          }
+        }
+    
+      }
+      &:hover {
+        cursor: pointer;
+        .hover {
+          &:before,
+          &:after {
+            width: 100%;
+            opacity: 1;
+          }
+          &.hover-3,
+          &.hover-4 {
+            &:before,
+            &:after {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  */ }
+  .list-region .list-region-1 {
+    /* sm-link_padding-bottom */
+    /* sm-link_text */
+    /* effect 4 */ }
+    .list-region .list-region-1 ul li {
+      list-style: none;
+      display: -ms-flex;
+      display: flex;
+      color: #fff;
+      align-items: center;
+      padding: 7px 0px;
+      margin: 17px 0; }
+    .list-region .list-region-1 ul li:before {
     /*
     content: "";
     display: flex;
@@ -462,8 +578,9 @@
     -ms-transform: rotate(47deg);
     -o-transform: rotate(47deg);
     transform: rotate(47deg);
-*/
-    content: "";
+
+
+        content: "";
     display: flex;
     width: 7px;
     height: 7px;
@@ -472,46 +589,62 @@
     color: #ffffff;
     background-color: #fff;
     margin: 5px 10px 3px -7px;
-    padding: 2px; }
-  .list-region .list-region-1 ul a {
-    width: 100%; }
-  .list-region .list-region-1 ul a:hover {
-    text-decoration: none; }
-  .list-region li {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin: 0 0 45px;
-    color: #ffffff; }
-    .list-region li .hover {
-      margin: 0 auto;
-      padding: 0;
-      transition: all 0.2s ease-in-out;
-      position: relative;
-      color: #ffffff;
+    padding: 2px;
+    */ }
+    .list-region .list-region-1 ul a {
+      width: 100%;
+      color: #fff;
+      font-size: 17px;
       font-weight: bold; }
-      .list-region li .hover:before, .list-region li .hover:after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        width: 0px;
-        height: 5px;
-        margin: 5px 0 0;
-        transition: all 0.2s ease-in-out;
-        transition-duration: 0.75s;
-        opacity: 0;
-        background-color: #fff; }
-      .list-region li .hover.dsg:before {
-        left: 30%; }
-      .list-region li .hover.dsg:after {
-        right: 30%; }
-    .list-region li:hover {
-      cursor: pointer; }
-      .list-region li:hover .hover:before, .list-region li:hover .hover:after {
-        width: 100%;
-        opacity: 1; }
-      .list-region li:hover .hover.hover-3:before, .list-region li:hover .hover.hover-3:after, .list-region li:hover .hover.hover-4:before, .list-region li:hover .hover.hover-4:after {
-        width: 50%; }
+    .list-region .list-region-1 ul a:hover {
+      text-decoration: none;
+      color: #fff; }
+    .list-region .list-region-1 .sm-link {
+      --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+      --uismLinkTextColor: var(--smLinkTextColor);
+      --uismLinkTextColorHover: var(--smLinkTextColorHover);
+      display: var(--uismLinkDisplay);
+      color: var(--uismLinkTextColor);
+      position: relative;
+      overflow: hidden; }
+    .list-region .list-region-1 a.sm-link {
+      text-decoration: none; }
+    .list-region .list-region-1 .sm-link__label {
+      display: block; }
+    .list-region .list-region-1 .sm-link_padding-bottom {
+      --uismLinkLineWeight: var(--smLinkLineWeight, 4px);
+      --uismLinkLineColor: var(--smLinkLineColor, #FFF);
+      padding-bottom: var(--uismLinkLineWeight);
+      position: relative; }
+    .list-region .list-region-1 .sm-link_padding-bottom::after {
+      content: "";
+      width: 100%;
+      height: var(--uismLinkLineWeight);
+      background-color: var(--uismLinkLineColor);
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+    .list-region .list-region-1 .sm-link_bg:hover {
+      color: var(--uismLinkTextColorHover); }
+    .list-region .list-region-1 .sm-link_text::before {
+      content: attr(data-sm-link-text);
+      color: var(--uismLinkTextColorHover);
+      position: absolute; }
+    .list-region .list-region-1 .sm-link_text::before,
+    .list-region .list-region-1 .sm-link_text .sm-link__label {
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.86, 0.6, 0.08, 1.01);
+      transition-duration: .3s; }
+    .list-region .list-region-1 .sm-link_text:hover::before,
+    .list-region .list-region-1 .sm-link_text:hover .sm-link__label {
+      transition-duration: .4s; }
+    .list-region .list-region-1 .sm-link4::after {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+      transition: transform .3s ease-out, opacity .3s ease-out; }
+    .list-region .list-region-1 .sm-link4:hover::after {
+      opacity: 1;
+      transform: translate3d(0, 0, 0); }
 
 .region-compteur {
   background-color: #fff;
@@ -619,30 +752,76 @@
     text-decoration: none;
     border-radius: 4px; }
 
-.contact-message-contact-form .content {
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center; }
-.contact-message-contact-form #edit-actions {
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center; }
-.contact-message-contact-form fieldset label {
-  display: none; }
-.contact-message-contact-form h2 {
-  padding-top: 60px; }
-.contact-message-contact-form input, .contact-message-contact-form textarea {
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
-  border-bottom: 1px solid #757575; }
-.contact-message-contact-form input:focus {
-  outline: none;
-  box-shadow: 0 4px 2px -2px rgba(0, 123, 255, 0.25);
-  border-bottom: 1px solid rgba(0, 123, 255, 0.25); }
-.contact-message-contact-form #edit-preview {
-  display: none; }
+.contact-message-contact-form {
+  background-image: url(/themes/custom/pharmacie_theme/images/nous-contactez.png);
+  background-position: right 10% bottom 45%;
+  background-repeat: no-repeat; }
+  .contact-message-contact-form .content {
+    display: -ms-flexbox;
+    display: flex; }
+  .contact-message-contact-form #edit-actions {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center; }
+    .contact-message-contact-form #edit-actions button {
+      border: 2px solid #235196;
+      padding: 6px 22px;
+      border-radius: 5px;
+      font-size: 15px;
+      height: auto;
+      text-transform: inherit;
+      color: #235196;
+      font-weight: 500;
+      line-height: normal;
+      position: relative;
+      margin: 0;
+      background: none;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1; }
+      .contact-message-contact-form #edit-actions button:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #4ccfe0;
+        transition: all .3s;
+        z-index: -1; }
+      .contact-message-contact-form #edit-actions button:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #235196;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -2; }
+      .contact-message-contact-form #edit-actions button:hover {
+        color: #fff;
+        border: 2px solid #4ccfe0;
+        text-decoration: none; }
+        .contact-message-contact-form #edit-actions button:hover:before {
+          width: 100%; }
+  .contact-message-contact-form fieldset label {
+    display: none; }
+  .contact-message-contact-form h2 {
+    padding-top: 60px; }
+  .contact-message-contact-form input, .contact-message-contact-form textarea {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #757575; }
+  .contact-message-contact-form input:focus {
+    outline: none;
+    box-shadow: 0 4px 2px -2px rgba(0, 123, 255, 0.25);
+    border-bottom: 1px solid rgba(0, 123, 255, 0.25); }
+  .contact-message-contact-form #edit-preview {
+    display: none; }
 
 #contact-message-newsletter-form {
   display: -ms-flexbox;
@@ -709,21 +888,56 @@ h2 {
     color: #293275;
     font-size: 19px; }
   #block-frontlanding .front-landing-page a {
-    background: #ffffff;
-    color: #4ccfe0;
-    border: 1px solid #235196;
-    /* border-radius: 50px; */
-    border: 3px solid #4ccfe0;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 39px 0; }
+    border: 2px solid #235196;
+    padding: 6px 22px;
+    border-radius: 5px;
+    margin-top: 64px !important;
+    font-size: 17px;
+    height: auto;
+    text-transform: inherit;
+    color: #235196;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    margin: 0;
+    background: none;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; }
+    #block-frontlanding .front-landing-page a:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #4ccfe0;
+      transition: all .3s;
+      z-index: -1; }
+    #block-frontlanding .front-landing-page a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #235196;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: -2; }
+    #block-frontlanding .front-landing-page a:hover {
+      color: #fff;
+      border: 2px solid #4ccfe0;
+      text-decoration: none; }
+      #block-frontlanding .front-landing-page a:hover:before {
+        width: 100%; }
   #block-frontlanding a:focus {
     color: #fff;
     border: none; }
   #block-frontlanding .txt-info {
-    padding: 105px 0px 123px 108px;
+    padding: 10% 0px 155px 12%;
     background-image: url(/themes/custom/pharmacie_theme/images/bg-info-txt.png);
-    background-position: right -5% bottom 45%;
+    background-position: right 10% bottom 45%;
     background-repeat: no-repeat; }
   #block-frontlanding .img-phar {
     border-radius: 453px 0px 0px 453px;
@@ -731,8 +945,177 @@ h2 {
     -webkit-border-radius: 453px 0px 0px 453px;
     border: 0px solid #000000;
     background: #E7EDF4; }
-    #block-frontlanding .img-phar img {
-      margin-top: 101px; }
+
+/************Services**************/
+.bloc-serivices {
+  margin: 0 auto; }
+  .bloc-serivices .card-services {
+    padding: 100px 0; }
+    .bloc-serivices .card-services .card {
+      min-height: 400px;
+      background: #fff;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: 0.5s; }
+      .bloc-serivices .card-services .card .box {
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%; }
+        .bloc-serivices .card-services .card .box img {
+          width: 120px;
+          height: 120px;
+          margin: 0 auto;
+          border-radius: 50%;
+          overflow: hidden; }
+        .bloc-serivices .card-services .card .box h2 {
+          font-size: 20px;
+          color: #262626;
+          padding: 28px 0 !important; }
+          .bloc-serivices .card-services .card .box h2 span {
+            font-size: 14px;
+            background: #235196;
+            color: #fff;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 15px; }
+        .bloc-serivices .card-services .card .box p {
+          color: #262626; }
+      .bloc-serivices .card-services .card .envoyer-dmd {
+        border: 2px solid #235196;
+        padding: 6px 22px;
+        border-radius: 5px;
+        font-size: 15px;
+        height: auto;
+        text-transform: inherit;
+        color: #235196;
+        font-weight: 500;
+        line-height: normal;
+        position: relative;
+        margin: 0;
+        background: none;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1; }
+        .bloc-serivices .card-services .card .envoyer-dmd:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 100%;
+          background-color: #4ccfe0;
+          transition: all .3s;
+          z-index: -1; }
+        .bloc-serivices .card-services .card .envoyer-dmd:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: #235196;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          z-index: -2; }
+        .bloc-serivices .card-services .card .envoyer-dmd:hover {
+          color: #fff;
+          border: 2px solid #4ccfe0;
+          text-decoration: none; }
+          .bloc-serivices .card-services .card .envoyer-dmd:hover:before {
+            width: 100%; }
+    .bloc-serivices .card-services .card:hover {
+      transform: scale(1.1); }
+
+/************Services**************/
+/* BTN SIX */
+/************Services**************/
+.img-phar {
+  margin: 0 auto;
+  height: 86vh;
+  overflow: hidden; }
+
+#slider {
+  height: 600px;
+  overflow: hidden;
+  margin-top: 70px; }
+
+#slider > img {
+  height: 600px;
+  float: left;
+  display: none; }
+
+.arrow {
+  overflow: hidden;
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .arrow a {
+    font-size: 0 !important;
+    background: none !important;
+    border: none !important; }
+    .arrow a:hover {
+      text-decoration: none; }
+  .arrow a:first-child:before, .arrow a:last-child:before {
+    content: "\f053";
+    color: #1d71b8;
+    font-family: 'fontawesome';
+    font-size: 41px;
+    padding-right: 5px; }
+  .arrow a:last-child:before {
+    content: "\f054"; }
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+  top: 47%; }
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 2px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; }
+
+@keyframes arrow {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari 和 Chrome */ }
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari 和 Chrome */ }
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */ }
 
 .card-grossiste {
   display: -ms-flexbox;
@@ -1044,7 +1427,7 @@ h2 {
         display: none; }
     .path-commander .node-commande-form.node-form .layout-region-node-main td.tabledrag-hide, .path-commander .node-commande-form.node-form .layout-region-node-main th.tabledrag-hide {
       display: none; }
-  .path-commander .thead-med:nth-child(3) {
+  .path-commander .thead-med:not(:last-child) {
     display: none; }
   .path-commander .thead-med {
     width: 100%;
@@ -1078,6 +1461,9 @@ h2 {
       color: #ffffff;
       font-weight: 400;
       font-family: FontAwesome; }
+  .path-commander select {
+    margin-left: 30px;
+    width: 30%; }
   .path-commander .switch {
     position: relative;
     display: inline-block;
@@ -1224,6 +1610,264 @@ h2 {
     transition-delay: 0.4s; }
 
 .adminimal-admin-toolbar .navbar.fixed-top {
+  position: inherit; }
+.adminimal-admin-toolbar .bg-primary {
+  margin-top: 0px; }
+
+#breadcrumbs {
   display: none; }
+  #breadcrumbs .breadcrumb {
+    background: #fff; }
+
+.path-mon-profil .layout-main-wrapper #main {
+  overflow: hidden; }
+  .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first {
+    background: #434a54; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills a {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 500;
+      border-radius: 0; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills a:hover, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills a:hover:before {
+      color: #4ccfe0 !important;
+      color: #4ccfe0; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills a.active:hover, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills a.active:hover:before {
+      color: #fff !important;
+      color: #fff; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills li:nth-child(1) a::before, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills li:nth-child(2) a::before,
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills li:nth-child(3) a::before {
+      content: "\f2bb";
+      font-size: 24px;
+      padding: 3px 10px;
+      color: #fff;
+      font-weight: 400;
+      font-family: FontAwesome; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills li:nth-child(2) a::before {
+      content: "\f1da"; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills li:nth-child(3) a::before {
+      content: "\f023"; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .nav.nav-pills a.active {
+      background-color: #4ccfe0;
+      border-radius: 0;
+      border-left: 6px solid #ffffff;
+      color: #fff; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .header-menu-connexion.view-display-id-block_2 .views-row {
+      width: 100%; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .header-menu-connexion.view-display-id-block_2 .views-row .connecte-menu {
+        padding: 14px 10% 80px;
+        width: 100%;
+        display: block; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .header-menu-connexion.view-display-id-block_2 .views-row .connecte-menu .field-nom, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .header-menu-connexion.view-display-id-block_2 .views-row .connecte-menu .field-prenom {
+          color: #fff;
+          font-size: 17px; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .header-menu-connexion.view-display-id-block_2 .views-row .connecte-menu span.field-nom::before {
+          content: '';
+          display: inline-block;
+          width: 11px;
+          position: absolute;
+          left: 73px;
+          height: 11px;
+          border: 0.5px solid white;
+          -moz-border-radius: 7.5px;
+          -webkit-border-radius: 7.5px;
+          border-radius: 7.5px;
+          background-color: #42b72a; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--first .header-menu-connexion.view-display-id-block_2 .views-row .connecte-menu .type-profile {
+          padding-left: 11%;
+          color: #b9b9b9;
+          font-size: 13px; }
+  .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second {
+    flex: 0 1 70%; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .form-group {
+      margin-bottom: 6px; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second form {
+      width: 60%;
+      margin: 0 auto; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset {
+      border: 1px solid #c1c4cf;
+      border-radius: 4px;
+      width: 100%;
+      margin-bottom: 8px; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset input, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset select, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset textarea {
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        padding: 0px 17px; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset input:focus, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset select:focus, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset textarea:focus {
+          box-shadow: none;
+          border: none; }
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #4ccfe0; }
+  100% {
+    box-shadow: 0 0 20px #4ccfe0; } }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second fieldset label {
+        margin: 0px;
+        padding: 0px 17px;
+        color: #235196;
+        font-size: 12px; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .field--name-field-nom fieldset {
+      width: 50%;
+      float: left;
+      margin-right: 1%; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .field--name-field-prenom fieldset {
+      width: 49%; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #edit-field-categorie--wrapper {
+      border: none; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #edit-field-categorie--wrapper legend {
+        font-size: 14px;
+        color: #235196; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #edit-field-categorie--wrapper #edit-field-categorie {
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .border-field {
+      border: 1px solid #4ccfe0;
+      animation: glow 800ms ease-out infinite alternate;
+      outline: none; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .custom-select:disabled {
+      background: none; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #edit-actions, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second div[id*='edit-actions'] {
+      padding-bottom: 100px;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #edit-actions button, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second div[id*='edit-actions'] button {
+        background: #4ccfe0;
+        border: 1px solid #4ccfe0;
+        width: 160px;
+        font-weight: 500;
+        font-size: 18px; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form small, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form .password-strength, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form .password-suggestions, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form .password-confirm-message
+    , .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form .form-type-language-select, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form details {
+      display: none; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form .image-widget-data span {
+      display: none; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form button[id*="remove"] {
+      font-size: 0;
+      background: none;
+      border: none; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form button[id*="remove"]:before {
+        content: "\f1f8";
+        font-size: 25px;
+        padding: 10px;
+        color: #4ccfe0;
+        font-weight: 400;
+        font-family: FontAwesome; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form .js-form-type-password-confirm,
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second #user-form .js-form-type-managed-file {
+      border: none; }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie {
+      display: flex;
+      justify-content: space-around;
+      /* margin-bottom: 50px; */
+      height: 100vh; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .card {
+        display: inline-block;
+        position: relative;
+        width: 220px;
+        height: 200px;
+        word-wrap: break-word;
+        border: 0.0625rem solid rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        background-color: #fff;
+        background-clip: border-box;
+        box-shadow: 0 0 2rem 0 white; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .card .link-ht {
+          color: #265498;
+          font-weight: bold; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .card-lift--hover:hover {
+        transition: all 0.15s ease;
+        transform: translateY(-20px);
+        box-shadow: 0 0 2rem 0 #4ccfe0;
+        cursor: pointer; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .cover-bg {
+        background: transparent;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .card .card-blockquote {
+        position: relative;
+        padding: 1rem; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.15s ease;
+        border-radius: 10px; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .opacity-7 {
+        opacity: 0.7; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .bg-gradient-default {
+        background: #fff; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .rounded-circle {
+        border-radius: 50%; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .mt-sm {
+        margin-top: 2rem; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .mb-sm {
+        margin-bottom: 2rem; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .icon i,
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .icon svg {
+        font-size: 1.7rem; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .icon-shape {
+        display: block; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .icon-shape i,
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .icon-shape svg {
+        font-size: 3.25rem; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .historique-pharmacie .icon-color {
+        color: #235196; }
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left; }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left; }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right; }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right; } }
+    .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus {
+      width: 90%;
+      margin: 0 auto;
+      margin: 0 auto; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table {
+        background: #fbfafa;
+        border: 2px solid #4ccfe0; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table .views-field-title {
+          width: 16%;
+          text-align: center;
+          padding-top: 7px; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table .views-field-field-medicaments-commandes .list-group-item {
+          background-color: transparent !important;
+          border: none !important; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table .views-field-nothing a, .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table .views-field-nothing button {
+          background: #4ccfe0;
+          border: 1px solid #4ccfe0;
+          color: #fff;
+          font-weight: 500; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table .views-field-nothing .dropdown-item {
+          background: #fff;
+          color: #524c4c;
+          font-size: 12px;
+          border: none; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus table tr:nth-child(even) {
+          background-color: #f7f7f7; }
+      .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus td {
+        padding: 5px 5px;
+        border-bottom: 1px solid #4ccfe0; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus td .btn-link {
+          background: #4ccfe0;
+          border: 1px solid #4ccfe0;
+          color: #fff;
+          font-weight: 500; }
+        .path-mon-profil .layout-main-wrapper #main .layout__region.layout__region--second .commande-recus td .field--name-field-medicament {
+          margin-bottom: 3px; }
+.path-mon-profil .site-footer {
+  margin-top: 0px; }
 
 /*# sourceMappingURL=default.css.map */
