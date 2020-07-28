@@ -81,25 +81,12 @@ jQuery("#slider > img").hover(
 
 
  (function ($) {
-/*
-  if ($('body').length>0){
 
-if (!$('body').hasClass("user-logged-in")){
-   $('.fixed-top').remove();
-    $('.bg-primary').removeClass('menu-nav-ht');
-
-
-}
-else{
-
-  $('.bg-primary').addClass('menu-nav-ht');
-}
-}
-	*/
 
 
 jQuery(document).ready(function() {
-  //alert("pzzzzppmo");
+$(".navbar-expand-lg").addClass('fixed-top');
+
   jQuery("#slider > img#1").fadeIn(300);
   startSlider();
 })
@@ -108,8 +95,7 @@ jQuery(document).ready(function() {
 
 
 if ($('header').length>0){
-
-$(".login.button span").html('SE CONNECTER');
+//$(".login.button span").text('SdddE CONNECTER');
   $("<i class='fa fa-envelope-o'></i></i>").insertBefore($('.drop-down-login-container .js-form-item-name input'));
    $("<i class='fa fa-lock'></i>").insertBefore($('.drop-down-login-container .js-form-item-pass input'))
     

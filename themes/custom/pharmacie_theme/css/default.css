@@ -72,26 +72,33 @@
   #page #main-wrapper {
     flex-grow: 1; }
 
-.navbar-expand-lg .navbar-collapse {
-  justify-content: flex-end; }
-  .navbar-expand-lg .navbar-collapse a {
-    text-transform: uppercase;
+header {
+  margin-bottom: 60px; }
+
+.navbar-expand-lg .block-pharmacie-theme-main-menu, .navbar-expand-lg .navbar-collapse {
+  justify-content: space-around; }
+  .navbar-expand-lg .block-pharmacie-theme-main-menu a, .navbar-expand-lg .navbar-collapse a {
+    /*text-transform: uppercase;
     font-weight: 500;
-    color: #235196; }
-  .navbar-expand-lg .navbar-collapse a:hover {
+    color: #235196;*/ }
+  .navbar-expand-lg .block-pharmacie-theme-main-menu a:hover, .navbar-expand-lg .navbar-collapse a:hover {
     color: #4CCFE0; }
 
 #navbar-main {
-  background-color: #e7edf4 !important;
+  background-color: #fff !important;
   border: none;
-  box-shadow: none; }
+  box-shadow: none;
+  box-shadow: 0px 0px 10px #e5e5e5; }
 
-.region-header-form a {
-  color: #235196;
-  border: 2px solid #4ccfe0;
-  border-radius: 50px;
-  padding: 0px 22px;
-  margin-right: 10px; }
+#block-pharmacie-theme-main-menu a {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #235196; }
+  #block-pharmacie-theme-main-menu a:hover, #block-pharmacie-theme-main-menu a:hover:before {
+    color: #4CCFE0; }
+
+.navbar {
+  padding: 0; }
 
 *,
 *::before,
@@ -102,9 +109,6 @@
   height: 58px;
   background: #fff !important;
   box-shadow: 0px 0px 10px #e5e5e5; }
-
-.bg-primary {
-  margin-top: 55px; }
 
 .menu-navigation-top h1 {
   display: none; }
@@ -308,6 +312,28 @@
 }
 */
 /******-----fom login ------******/
+.inscription {
+  display: -ms-flexbox;
+  display: flex;
+  color: #235196;
+  /* margin-right: 33px; */
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px;
+  border: 1px solid #2351a1;
+  padding: 10px 20px;
+  border-radius: 6px;
+  height: 35px;
+  margin-right: 16px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  width: 155px; }
+  .inscription:hover {
+    text-decoration: none;
+    border: 1px solid #44bac9; }
+
 .login-form-connect .dropdown {
   padding: 0;
   overflow: hidden;
@@ -330,17 +356,21 @@
   display: -ms-flexbox;
   display: flex;
   color: #235196;
-  margin-right: 33px;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   padding: 0px;
   border: 1px solid #2351a1;
-  padding: 10px 5px;
+  padding: 10px 32px;
   border-radius: 6px;
-  height: 35px; }
+  height: 35px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  width: 155px; }
+  .login-form-connect #drop-down-login-wrapper .login.button span {
+    background: none; }
   .login-form-connect #drop-down-login-wrapper .login.button:before {
-    content: "\f2bd";
     color: #1d71b8;
     font-family: 'fontawesome';
     font-size: 22px;
