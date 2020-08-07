@@ -120,7 +120,7 @@ if ($('header').length>0){
 
 
 
-jQuery('a[href^="#block-maptunsie"],a[href^="#block-services-2"]').on('click', function (event) {
+jQuery('a[href^="#block-maptunsie"],a[href^="#block-services"]').on('click', function (event) {
         var target = jQuery(this.getAttribute('href'));
         if (target.length) {
 
