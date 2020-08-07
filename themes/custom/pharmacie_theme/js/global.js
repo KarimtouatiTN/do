@@ -87,13 +87,28 @@ jQuery("#slider > img").hover(
 jQuery(document).ready(function() {
   //alert("dddd");
 $(".navbar-expand-lg").addClass('fixed-top');
-$(".nav-link--services").attr("href", "#block-services-2")
+//$(".nav-link--services").attr("href", "#block-services-2")
   //jQuery("#slider > img#1").fadeIn(300);
   //startSlider();
 })
 
 
+if (jQuery('body').length > 0) {
 
+            var btn = $('#button-top');
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+            });
+
+}
 
 if ($('header').length>0){
 //$(".login.button span").text('SdddE CONNECTER');
@@ -258,6 +273,20 @@ if ($('header').length>0){
   $("#shown-button-notif").css('background','red');
   $("#shown-button-notif:contains('0')").css('background','white');
 }
+
+
+//alert('oook');
+jQuery('a[href^="#block-maptunsie"],a[href^="#block-services-2"],a[href^="#block-pharmacie-theme-content"]').on('click', function (event) {
+        var target = jQuery(this.getAttribute('href'));
+        if (target.length) {
+
+          event.preventDefault();
+          jQuery('html, body').animate({
+            scrollTop: target.offset().top - 60
+          }, 1000);
+        }
+      });
+
 
 
 

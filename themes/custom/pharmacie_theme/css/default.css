@@ -962,6 +962,8 @@ h2 {
       text-decoration: none; }
       #block-frontlanding .front-landing-page a:hover:before {
         width: 100%; }
+    #block-frontlanding .front-landing-page a:focus {
+      color: #235196; }
   #block-frontlanding a:focus {
     color: #fff;
     border: none; }
@@ -1909,5 +1911,42 @@ a {
           margin-bottom: 3px; }
 .path-mon-profil .site-footer {
   margin-top: 0px; }
+
+#button-top {
+  display: inline-block;
+  background-color: #4ccfe0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,opacity .5s,visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-decoration: none; }
+
+#button-top.show {
+  opacity: 1;
+  visibility: visible; }
+
+.show {
+  display: block !important; }
+
+#button-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff; }
+
+#button-top:hover {
+  cursor: pointer;
+  background-color: #235196;
+  border: 1px solid #fff; }
 
 /*# sourceMappingURL=default.css.map */

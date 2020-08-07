@@ -668,6 +668,10 @@ svg{
             width: 100%;
         }
     }
+     &:focus {
+      color: #235196;
+      //background: #fff;
+     }
 
 
     }

@@ -1092,3 +1092,42 @@ input:focus ~ .focus-border i:after{transition-delay: 0.4s;}
   }
 }
 
+#button-top {
+    display: inline-block;
+    background-color: #4ccfe0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,opacity .5s,visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    text-decoration: none;
+}
+#button-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .show {
+    display: block!important;
+  }
+
+  #button-top::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#button-top:hover {
+    cursor: pointer;
+    background-color: #235196;
+    border: 1px solid #fff;
+}
+
