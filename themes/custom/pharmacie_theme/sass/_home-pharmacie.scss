@@ -592,6 +592,7 @@ svg{
 
 
 #block-frontlanding{
+   background: #4ccfe0;
   .content{
         height: 100vh;
   }
@@ -615,11 +616,11 @@ svg{
     }
     p{
        line-height: 26px;
-    color: #293275;
-    font-size: 19px;
+    color: #fff;
+    font-size: 21px;
     }
     a{
-     border: 2px solid #235196;
+     border: 2px solid #fff;
     padding: 6px 22px;
     border-radius: 5px;
         margin-top: 64px !important;
@@ -644,7 +645,7 @@ svg{
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: #4ccfe0;
+    background-color: #235196;
     transition: all .3s;
     z-index: -1;
     }
@@ -661,7 +662,7 @@ svg{
     }
      &:hover {
         color: #fff;
-            border: 2px solid #4ccfe0;
+            border: 2px solid #235196;
         text-decoration: none;
         &:before {
             width: 100%;

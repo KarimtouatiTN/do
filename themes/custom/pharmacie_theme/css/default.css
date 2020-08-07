@@ -899,6 +899,7 @@ h2 {
 
 /* active state */
 #block-frontlanding {
+  background: #4ccfe0;
   overflow: hidden;
   width: 100%; }
   #block-frontlanding .content {
@@ -915,10 +916,10 @@ h2 {
     text-transform: capitalize; }
   #block-frontlanding .front-landing-page p {
     line-height: 26px;
-    color: #293275;
-    font-size: 19px; }
+    color: #fff;
+    font-size: 21px; }
   #block-frontlanding .front-landing-page a {
-    border: 2px solid #235196;
+    border: 2px solid #fff;
     padding: 6px 22px;
     border-radius: 5px;
     margin-top: 64px !important;
@@ -942,7 +943,7 @@ h2 {
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: #4ccfe0;
+      background-color: #235196;
       transition: all .3s;
       z-index: -1; }
     #block-frontlanding .front-landing-page a:after {
@@ -957,7 +958,7 @@ h2 {
       z-index: -2; }
     #block-frontlanding .front-landing-page a:hover {
       color: #fff;
-      border: 2px solid #4ccfe0;
+      border: 2px solid #235196;
       text-decoration: none; }
       #block-frontlanding .front-landing-page a:hover:before {
         width: 100%; }
