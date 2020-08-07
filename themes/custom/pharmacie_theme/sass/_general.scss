@@ -664,7 +664,7 @@ input:focus ~ .focus-border i:after{transition-delay: 0.4s;}
     #main{
       overflow: hidden;
       .layout__region.layout__region--first{
-            background: #434a54;
+           background: linear-gradient(#e66465, #9198e5);
            // height: 100vh;
            .nav.nav-pills{
               a{

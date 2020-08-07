@@ -4,7 +4,7 @@
  *
  */
 
-
+/*
 sliderInt=1;
 sliderNext=2;
 
@@ -74,7 +74,7 @@ jQuery("#slider > img").hover(
 
 
 
-
+*/
 
 
 
@@ -85,10 +85,11 @@ jQuery("#slider > img").hover(
 
 
 jQuery(document).ready(function() {
+  //alert("dddd");
 $(".navbar-expand-lg").addClass('fixed-top');
-
-  jQuery("#slider > img#1").fadeIn(300);
-  startSlider();
+$(".nav-link--services").attr("href", "#block-services-2")
+  //jQuery("#slider > img#1").fadeIn(300);
+  //startSlider();
 })
 
 
@@ -104,7 +105,7 @@ if ($('header').length>0){
 
 
 
-jQuery('a[href^="#block-maptunsie"]').on('click', function (event) {
+jQuery('a[href^="#block-maptunsie"],a[href^="#block-services-2"]').on('click', function (event) {
         var target = jQuery(this.getAttribute('href'));
         if (target.length) {
 
@@ -253,7 +254,7 @@ jQuery(".field--name-field-email input").attr("placeholder", "Entrez votre email
 
 
 if ($('header').length>0){
-//alert("zzzz")
+
   $("#shown-button-notif").css('background','red');
   $("#shown-button-notif:contains('0')").css('background','white');
 }
