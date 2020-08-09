@@ -110,12 +110,13 @@ if (jQuery('body').length > 0) {
 
 }
 
-if ($('header').length>0){
+if ($('header,.path-inscription').length>0){
 //$(".login.button span").text('SdddE CONNECTER');
-  $("<i class='fa fa-envelope-o'></i></i>").insertBefore($('.drop-down-login-container .js-form-item-name input'));
+  $("<i class='fa fa-envelope-o'></i></i>").insertBefore($('.drop-down-login-container .js-form-item-name input,.user-register-form input[type="email"]'));
    $("<i class='fa fa-lock'></i>").insertBefore($('.drop-down-login-container .js-form-item-pass input'))
-    
- 
+   $("<i class='fa fa-user-o'></i></i>").insertBefore($('.user-register-form input.username')); 
+    $(".create-account-link").attr("href", "inscription")
+
   }
 
 

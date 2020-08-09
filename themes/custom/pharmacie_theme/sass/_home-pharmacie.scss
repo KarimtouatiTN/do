@@ -21,12 +21,12 @@ $animate: all 0.2s ease-in-out;
     }
   }
 .tn-zoom:hover{
-  transform:scale(1) !important;
+ // transform:scale(1) !important;
 }
 .land:hover{
       fill: #4ccfe0;
       stroke: #4ccfe0;   
-      transform: scale(1.051);
+     // transform: scale(1.051);
  } 
 
 
@@ -901,4 +901,20 @@ a {
 .arrows path.a3 { 
   animation-delay:0s;
   -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.path-frontpage{
+  h2{
+        position: relative;
+  }
+h2::after{
+  border-bottom: 4px solid #4ccfe0;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 11%;
+    bottom: 0;
+    margin: 0 auto;
+}
 }

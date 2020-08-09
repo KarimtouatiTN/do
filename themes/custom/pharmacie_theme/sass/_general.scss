@@ -1131,3 +1131,132 @@ input:focus ~ .focus-border i:after{transition-delay: 0.4s;}
     border: 1px solid #fff;
 }
 
+
+/******Page inscription********/
+
+.path-inscription{
+     label{
+      -ms-flex-pack: start;
+    justify-content: flex-start;
+        padding-left: 74px;
+        margin-bottom:0px;
+    padding-top: 11px;
+       color: #235196;
+       font-size: 14px;
+       &::after{
+            content: "*" !important;
+        color: red !important;
+       background: none;
+    width: inherit!important;
+    height: inherit!important;
+        margin: 0 0.3em !important;
+        font-weight: bold !important;
+       }
+    }
+    input:not(#edit-user-picture-0-upload){
+       width: 60%;
+    padding: 15px 13px;
+    font-size: 14px;
+    height: 30px;
+    border: none;
+    margin-bottom: 8px;
+    margin-left: 59px;
+    margin-top: -4px;
+    background: none;
+    border-bottom: 1px solid #c1c4cf;
+    border-radius: 0;
+
+
+
+    }
+
+    i{
+    display: block;
+    font-size: 26px;
+    color: #235196;
+    padding-left: 31px;
+    position: absolute;
+    }
+
+#edit-actions {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    button{
+          border: 2px solid #235196;
+        padding: 6px 22px;
+        border-radius: 5px;
+        font-size: 15px;
+        height: auto;
+        text-transform: inherit;
+        color: #235196;
+        font-weight: 500;
+        line-height: normal;
+        position: relative;
+        margin: 0;
+        background: none;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        margin-top: 55px;
+        &::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #4ccfe0;
+    transition: all .3s;
+    z-index: -1;
+        }
+        &::after{
+              content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #235196;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -2;
+        }
+    }
+       button:hover {
+        color: #fff;
+            border: 2px solid #4ccfe0;
+        text-decoration: none;
+        &:before {
+            width: 100%;
+        }
+    }
+}
+    .image-widget-data{
+      input{
+        border: none;
+      }
+    }
+    input:-webkit-autofill { 
+    background-color: #fff !important;
+    background-image: #fff !important;
+    color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+
+}
+    input:focus{
+      border-bottom: 1px solid #4ccfe0 !important;
+        background: none;
+        box-shadow: none;
+    }
+    small{
+      display: none;
+    }
+    .block-region-first{
+      img{
+        padding-top: 80px;
+      }
+    }
+}
+
+/******Page inscription********/

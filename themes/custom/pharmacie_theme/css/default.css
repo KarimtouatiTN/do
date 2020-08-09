@@ -481,7 +481,14 @@ header {
     border-bottom: none;
     border-radius: 4px 4px 0px 0px; }
 .login-form-connect .list-group-item {
-  display: none; }
+  border: none;
+  font-size: 12px;
+  border: none !important;
+  padding-left: 6%; }
+  .login-form-connect .list-group-item a {
+    color: #235196 !important; }
+  .login-form-connect .list-group-item a:hover {
+    color: #4ccfe0 !important; }
 
 /******-----fom login ------******/
 .map-tn-pharmacie .taille-map {
@@ -499,13 +506,9 @@ header {
   fill: #4ccfe0;
   stroke: #4ccfe0; }
 
-.tn-zoom:hover {
-  transform: scale(1) !important; }
-
 .land:hover {
   fill: #4ccfe0;
-  stroke: #4ccfe0;
-  transform: scale(1.051); }
+  stroke: #4ccfe0; }
 
 .region-map-tun {
   display: inherit; }
@@ -1157,6 +1160,18 @@ a {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   /* Safari 和 Chrome */ }
+
+.path-frontpage h2 {
+  position: relative; }
+.path-frontpage h2::after {
+  border-bottom: 4px solid #4ccfe0;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 11%;
+  bottom: 0;
+  margin: 0 auto; }
 
 .card-grossiste {
   display: -ms-flexbox;
@@ -1948,5 +1963,106 @@ a {
   cursor: pointer;
   background-color: #235196;
   border: 1px solid #fff; }
+
+/******Page inscription********/
+.path-inscription label {
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-left: 74px;
+  margin-bottom: 0px;
+  padding-top: 11px;
+  color: #235196;
+  font-size: 14px; }
+  .path-inscription label::after {
+    content: "*" !important;
+    color: red !important;
+    background: none;
+    width: inherit !important;
+    height: inherit !important;
+    margin: 0 0.3em !important;
+    font-weight: bold !important; }
+.path-inscription input:not(#edit-user-picture-0-upload) {
+  width: 60%;
+  padding: 15px 13px;
+  font-size: 14px;
+  height: 30px;
+  border: none;
+  margin-bottom: 8px;
+  margin-left: 59px;
+  margin-top: -4px;
+  background: none;
+  border-bottom: 1px solid #c1c4cf;
+  border-radius: 0; }
+.path-inscription i {
+  display: block;
+  font-size: 26px;
+  color: #235196;
+  padding-left: 31px;
+  position: absolute; }
+.path-inscription #edit-actions {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center; }
+  .path-inscription #edit-actions button {
+    border: 2px solid #235196;
+    padding: 6px 22px;
+    border-radius: 5px;
+    font-size: 15px;
+    height: auto;
+    text-transform: inherit;
+    color: #235196;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    margin: 0;
+    background: none;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 55px; }
+    .path-inscription #edit-actions button::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #4ccfe0;
+      transition: all .3s;
+      z-index: -1; }
+    .path-inscription #edit-actions button::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #235196;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: -2; }
+  .path-inscription #edit-actions button:hover {
+    color: #fff;
+    border: 2px solid #4ccfe0;
+    text-decoration: none; }
+    .path-inscription #edit-actions button:hover:before {
+      width: 100%; }
+.path-inscription .image-widget-data input {
+  border: none; }
+.path-inscription input:-webkit-autofill {
+  background-color: #fff !important;
+  background-image: #fff !important;
+  color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important; }
+.path-inscription input:focus {
+  border-bottom: 1px solid #4ccfe0 !important;
+  background: none;
+  box-shadow: none; }
+.path-inscription small {
+  display: none; }
+.path-inscription .block-region-first img {
+  padding-top: 80px; }
+
+/******Page inscription********/
 
 /*# sourceMappingURL=default.css.map */

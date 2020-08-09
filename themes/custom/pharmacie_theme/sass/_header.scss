@@ -525,7 +525,16 @@ font-size:14px ;
 
 	}
 	 .list-group-item{
-    	display: none;
+          border: none;
+         font-size: 12px;
+         border: none !important;
+         padding-left:6%;
+        a{
+           color: #235196 !important;
+        }
+        a:hover{
+           color: #4ccfe0 !important;
+        }
     }
 
 }
